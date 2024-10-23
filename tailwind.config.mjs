@@ -4,8 +4,12 @@ export default {
   theme: {
     colors: {
       black: "#000",
+      black10: "#001820",
       black20: "#393939",
       black120: "#CFD6DF",
+      yellow40: "#ECB81C",
+      yellow100: "#FFFBF0",
+      gray100: "#F0EFEC",
     },
     extend: {
       fontFamily: {
