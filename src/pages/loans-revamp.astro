@@ -1,0 +1,125 @@
+---
+import "../global.css";
+
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Banner from "../components/Banner.astro";
+---
+
+<BaseLayout title="Loans Revamp | Case Study">
+  <Header indent="large" />
+
+  <main class="max-w-3xl mt-14 mx-auto">
+    <h1 class="font-bold text-[44px] leading-[60px]">Loans Revamp</h1>
+
+    <section class="mt-10">
+      <h3 class="font-bold text-xl leading-8">Background</h3>
+
+      <p class="mt-2">
+        Jupiter is a digital banking app that helps users manage their finances,
+        offering services like savings accounts, UPI payments, loans, credit
+        cards, spends tracker, and various investment products. As we introduced
+        more features, our UI became cluttered, leading to many inconsistencies
+        that made the app feel less confident.
+        <br />
+        <br />
+        We decided to redesign the app and created new design principles to craft
+        every screen, number, and interaction in a way that a user always feels confident
+        about the decisions they make.
+      </p>
+    </section>
+
+    <section class="mt-10 mb-10">
+      <h3 class="font-bold text-xl leading-8">My Role</h3>
+
+      <p class="mt-2">
+        I led the complete redesign of loans experience, covering both pre &
+        post-disbursement journeys. I worked with product leadership to shape
+        journeys focused on clarity, transparency, and building trust.
+      </p>
+    </section>
+
+    <Banner
+      title="Impact"
+      body="We achieved a 24.8% increase in conversions for new users and a 27% boost for repeat users"
+    />
+
+    <div
+      class="relative h-px w-screen left-1/2 -translate-x-1/2 mt-12 bg-black120"
+    >
+    </div>
+
+    <section class="mt-24 mb-10">
+      <h2 class="font-bold text-[28px] leading-10">
+        Simplifying loan selection
+      </h2>
+
+      <p class="mt-4">
+        The previous loans tab was cluttered with too many actions, leaving
+        users confused. We asked ourselves, 'What’s the key task we want users
+        to accomplish?'— selecting the right loan option.
+        <br /><br />
+        We removed unnecessary elements to help users choose easily. <b
+          >The most critical factor in loan selection is the amount offered</b
+        >, so we redesigned the loan cards to be minimalistic and easy to
+        compare, with focus on loan limit using typography and placement
+      </p>
+    </section>
+
+    <section class="mt-24 mb-10">
+      <h2 class="font-bold text-[28px] leading-10">
+        Using animations for clarity
+      </h2>
+
+      <p class="mt-4">
+        In the previous design, the amount selection screen was static, with the
+        slider set to the maximum by default. This confused some users who
+        didn’t realize it was interactive. In the new design, we auto-animate
+        the slider from the lowest to highest amount to provide visual cues and
+        improve the landing experience. EMI and tenure options now load
+        dynamically based on the selected amount.
+      </p>
+    </section>
+
+    <section class="mt-24 mb-10">
+      <h2 class="font-bold text-[28px] leading-10">Setting up auto-pay</h2>
+
+      <p class="mt-4">
+        Users need to add a bank account and set up auto-pay before receiving
+        their loan amount. This can cause anxiety if accurate information isn’t
+        provided. We addressed this by making key copy changes and adding
+        helpful notes.
+      </p>
+    </section>
+
+    <section class="mt-24 mb-10">
+      <h2 class="font-bold text-[28px] leading-10">Checkout</h2>
+
+      <p class="mt-4">
+        After setting up auto-pay, the loan amount was instantly credited to
+        users' accounts, often without them realising it. Users didn’t have a
+        chance to review the details before disbursement, leading to accidental
+        disbursements. This led to 30% users foreclosing loans within first 3
+        days. To address this, we added a checkout screen for users to review
+        and confirm details before loan disbursement. This reduced early
+        foreclosures by 78%.
+      </p>
+    </section>
+
+    <section class="mt-24 mb-10">
+      <h2 class="font-bold text-[28px] leading-10">
+        End-to-end journey review
+      </h2>
+
+      <p class="mt-4">
+        After setting up auto-pay, the loan amount was instantly credited to
+        users' accounts, often without them realising it. Users didn’t have a
+        chance to review the details before disbursement, leading to accidental
+        disbursements. This led to 30% users foreclosing loans within first 3
+        days. To address this, we added a checkout screen for users to review
+        and confirm details before loan disbursement. This reduced early
+        foreclosures by 78%.
+      </p>
+    </section>
+  </main>
+</BaseLayout>

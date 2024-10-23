@@ -1,0 +1,59 @@
+---
+import Banner from "../components/Banner.astro";
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Flexi Deposits | Case Study">
+  <Header indent="large" />
+
+  <main class="mt-14 mx-auto">
+    <h1 class="font-bold text-[44px] leading-[60px] max-w-3xl mx-auto">
+      Flexi Deposits
+    </h1>
+
+    <section class="max-w-3xl mx-auto">
+      <section class="mt-10">
+        <h3 class="font-bold text-xl leading-8">Background</h3>
+
+        <p class="mt-2">
+          We found that 32% of Fixed Deposits are broken prematurely within 2
+          months of booking. 60% of these deposits were rebooked at 65% of the
+          original amount. Our hypothesis was that users needed money urgently
+          but had no option to withdraw partially. This forced them to break the
+          entire FD and lose earned interest. To solve this, we introduced Flexi
+          FD, a feature that allows users to withdraw partially from their FDs.
+        </p>
+      </section>
+
+      <section class="mt-10 mb-10">
+        <h3 class="font-bold text-xl leading-8">My Role</h3>
+
+        <p class="mt-2">
+          As a lead on this project, I collaborated with the visual design team
+          to create the product identity and conceptualised illustrations,
+          animations to explain the value propositions. I worked on the landing
+          experience to clearly communicate that the feature applies to all new
+          FDs, also designed the booking flow, dashboard, and the FD breaking
+          flow.
+        </p>
+      </section>
+
+      <Banner title="Impact" body="30% of the deposits booked are Flexi FDs" />
+    </section>
+
+    <section class="bg-gray100 py-14 mt-16">
+      <section class="max-w-3xl mx-auto">
+        <h2 class="font-bold text-[28px] leading-10">
+          Booking a Fixed Deposit
+        </h2>
+
+        <p class="mt-5">
+          Users explore various FD plans with different tenures and interest
+          rates. They can select any FD option and enable the Flexi FD feature,
+          which informs them that their FD will be booked in 3 or 5 equal parts.
+        </p>
+      </section>
+    </section>
+  </main>
+</BaseLayout>

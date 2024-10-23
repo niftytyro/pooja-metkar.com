@@ -25,3 +25,17 @@
   font-weight: 700;
   font-style: normal;
 }
+
+p {
+  font-size: 18px;
+  line-height: 26px;
+  color: #393939;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #001820;
+}
