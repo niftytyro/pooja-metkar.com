@@ -1,16 +1,35 @@
 ---
-
+import Header from "../components/Header.astro"
+import CaseStudyCard from '../components/CaseStudyCard.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Pooja Metkar">
+		<Header showDivider={false} />
+
+		<section class="mt-32 px-44">
+			<h1 class="text-5xl leading-[56px] text-black font-semibold">Hi</h1>
+
+			<p class="text-lg leading-7 mt-4 text-black20 max-w-3xl">
+				I’m a Bangalore-based UX designer, currently leading design for lending and investments at Jupiter.  graduated from the National Institute of Design, Ahmedabad in 2014 and have more than 9 years of experience designing a diverse range of physical and digital products. My work revolves around simplicity, understanding user emotions, and creating products that truly resonate with them.
+				<br><br>
+				Beyond work, you’ll often find me creating illustrations with everyday objects for delight. I love being outdoors, playing sports, going on hikes or high-altitude treks. I also enjoy reading novels, mostly fantasy fiction.
+				<br><br>
+				If you need to get in touch or know more about my work, find me on:
+			</p>
+
+			<nav class="text-xl leading-7 font-medium mt-4">
+				<a href="">Instagram</a>
+				•
+				<a href="">LinkedIn</a>
+				•
+				<a href="">Medium</a>
+			</nav>
+
+			<section class="grid grid-cols-2 w-full gap-5">
+				<CaseStudyCard />
+				<CaseStudyCard />
+				<CaseStudyCard />
+			</section>
+		</section>
+</BaseLayout>
