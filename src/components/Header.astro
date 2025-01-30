@@ -1,14 +1,13 @@
 ---
 interface Props {
   showDivider?: boolean;
-  indent?: "medium" | "large";
 }
 
-const { showDivider = true, indent = "medium" } = Astro.props;
+const { showDivider = true } = Astro.props;
 ---
 
 <header
-  class={`flex flex-row justify-between items-center py-8 text-black ${indent === "medium" ? "px-44" : "px-72"} ${showDivider ? "border-b-[1px] border-black120" : ""}`}
+  class={`flex flex-row justify-between items-center py-8 text-black px-44 ${showDivider ? "border-b-[1px] border-black120" : ""}`}
 >
   <h1 class="font-bold text-xl leading-7">
     <a href="/">POOJA METKAR</a>
@@ -16,6 +15,7 @@ const { showDivider = true, indent = "medium" } = Astro.props;
 
   <nav class="text-lg leading-6 space-x-14">
     <a href="/work">WORK</a>
+    <a href="/play">PLAY</a>
     <a href="/about">ABOUT</a>
   </nav>
 </header>

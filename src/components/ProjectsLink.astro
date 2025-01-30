@@ -1,0 +1,28 @@
+---
+interface Props {
+  index: number;
+  title: string;
+  link: string;
+}
+
+const { index, link, title } = Astro.props;
+
+import MagicArrow from "../icons/magic-arrow.svg";
+---
+
+<a
+  href={link}
+  class="flex flex-row justify-between align-center text-black space-x-6 my-12"
+>
+  <div class="flex flex-row items-baseline">
+    <span class="text-lg">
+      {index.toString().length < 2 ? `0${index}` : index}
+    </span>
+
+    <h1 class="text-5xl ml-6">
+      {title}
+    </h1>
+  </div>
+
+  <img src={MagicArrow.src} />
+</a>

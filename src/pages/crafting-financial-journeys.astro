@@ -1,0 +1,187 @@
+---
+import "../global.css";
+
+import Banner from "../components/Banner.astro";
+import ContentSection from "../components/ContentSection.astro";
+import Header from "../components/Header.astro";
+import ListItem from "../components/ListItem.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const autoPayScreenshotLabels = [
+  "Specify the exact amount users will get, allowing dropped off users adjust the loan amount later",
+  "A note to clarify that users must use a single account for loan disbursal and repayments",
+  "Clearly explain that auto-pay is required for EMI payments, including the EMI date and account",
+  "We recommend using debit card details option as it has higher success rate",
+];
+
+const checkoutScreenshotLabels = [
+  "Clearly state that the loan amount will be credited after confirming details to reduce user anxiety",
+  "Allow dropped-off users to adjust the loan amount at the final step for added flexibility",
+  "We Highlight only key details upfront, with an info icon for users to view full calculations for transparency",
+  "We show the first EMI date, which may change based on whether users complete the process in one go or return later",
+  "Emphasize the account for loan disbursal on the checkout screen as it’s crucial for users",
+];
+
+const disbursalJourneyScreenshots = 18;
+---
+
+<BaseLayout title="Crafting Financial Journeys">
+  <Header />
+
+  <main class="max-w-[896px] mx-auto space-y-16">
+    <h2 class="text-5xl mb-4 mt-20">Crafting Financial Journeys</h2>
+
+    <ContentSection title="Background">
+      <p class="text-lg">
+        Jupiter is a digital banking app that helps users manage their finances,
+        offering services like savings accounts, UPI payments, loans, credit
+        cards, spends tracker, and various investment products. As we introduced
+        more features, our UI became cluttered, leading to many inconsistencies
+        that made the app feel less confident.
+        <br /><br />
+        We decided to redesign the app and created new design principles to craft
+        every screen, number, and interaction in a way that a user always feels confident
+        about the decisions they make.
+      </p>
+    </ContentSection>
+
+    <ContentSection title="My Role">
+      <p class="text-lg">
+        I led the complete redesign of loans experience, covering both pre &
+        post-disbursement journeys. I worked with product leadership to shape
+        journeys focused on clarity, transparency, and building trust.
+      </p>
+    </ContentSection>
+
+    <Banner
+      title="Impact"
+      body="We achieved a 24.8% increase in conversions for new users and a 27% boost for repeat users"
+    />
+  </main>
+
+  <div class="mt-16 py-16 bg-almondMilk20">
+    <div class="max-w-[896px] mx-auto space-y-16">
+      <ContentSection title="Simplifying loan selection">
+        <p class="text-lg">
+          The previous loans tab was cluttered with too many actions, leaving
+          users confused. We asked ourselves, 'What’s the key task we want users
+          to accomplish?'— selecting the right loan option.
+          <br /><br />
+          We removed unnecessary elements to help users choose easily. The most critical
+          factor in loan selection is the amount offered, so we redesigned the loan
+          cards to be minimalistic and easy to compare, with focus on loan limit
+        </p>
+
+        <div class="h-[800px] w-[320px] bg-black60"></div>
+      </ContentSection>
+
+      <ContentSection title="Using animations for clarity">
+        <p class="text-lg">
+          In the previous design, the amount selection screen was static, with
+          the slider set to the maximum by default. This confused some users who
+          didn’t realise it was interactive.
+          <br /><br />
+          In the new design, we auto-animate the slider from the lowest to highest
+          amount to provide visual cues and improve the landing experience. EMI and
+          tenure options now load dynamically based on the selected amount.
+        </p>
+
+        <div class="h-[800px] w-[320px] bg-black60"></div>
+      </ContentSection>
+    </div>
+  </div>
+
+  <div class="bg-almondMilk">
+    <div class="py-16 max-w-[896px] mx-auto space-y-16">
+      <ContentSection title="Setting up auto-pay">
+        <p class="text-lg">
+          Users need to add a bank account and set up auto-pay before receiving
+          their loan amount. This can cause anxiety if accurate information
+          isn’t provided. We addressed this by making key copy changes and
+          adding helpful notes.
+        </p>
+      </ContentSection>
+    </div>
+
+    <img
+      src="/crafting-financial-journeys/setting-up-auto-pay.png"
+      class="mx-auto h-[586px] aspect-[1.7]"
+    />
+
+    <div class="py-16 max-w-[896px] mx-auto space-y-16">
+      {
+        autoPayScreenshotLabels.map((content, index) => (
+          <ListItem index={index + 1} content={content} />
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="bg-almondMilk20">
+    <div class="py-16 max-w-[896px] mx-auto space-y-16">
+      <ContentSection title="Checkout">
+        <p class="text-lg">
+          After setting up auto-pay, the loan amount was instantly credited to
+          users' accounts, often without them realising it. Users didn’t have a
+          chance to review the details before disbursement. This led to 30%
+          users foreclosing loans within first 3 days.
+          <br /><br />
+          To address this, we added a checkout screen for users to confirm details
+          before loan disbursement
+        </p>
+      </ContentSection>
+    </div>
+
+    <img
+      src="/crafting-financial-journeys/checkout.png"
+      class="mx-auto h-[586px] aspect-[0.75]"
+    />
+
+    <div class="py-16 max-w-[896px] mx-auto space-y-16">
+      {
+        checkoutScreenshotLabels.map((content, index) => (
+          <ListItem index={index + 1} content={content} />
+        ))
+      }
+    </div>
+
+    <div class="h-[0.8px] w-[896px] bg-black20 mx-auto"></div>
+
+    <div class="py-16">
+      <div class="max-w-[896px] mx-auto space-y-16">
+        <h3 class="text-2xl font-bold mb-2">The Disbursal Journey</h3>
+      </div>
+
+      <div
+        class="flex flex-row space-x-11 overflow-x-scroll px-[72px] mt-16 no-scrollbar"
+      >
+        {
+          Array(disbursalJourneyScreenshots)
+            .fill(0)
+            .map((_, index) => (
+              <img
+                src={`/crafting-financial-journeys/disbursal-journey/${index + 1}.png`}
+                class={`h-[456px] aspect-[0.46] flex-shrink-0`}
+              />
+            ))
+        }
+      </div>
+    </div>
+
+    <div class="h-[0.8px] w-[896px] bg-black20 mx-auto"></div>
+
+    <div class="py-16 max-w-[896px] mx-auto space-y-16">
+      <ContentSection title="Simplifying Repayments">
+        <p class="text-lg">
+          After setting up auto-pay, the loan amount was instantly credited to
+          users' accounts, often without them realising it. Users didn’t have a
+          chance to review the details before disbursement. This led to 30%
+          users foreclosing loans within first 3 days.
+          <br /><br />
+          To address this, we added a checkout screen for users to confirm details
+          before loan disbursement
+        </p>
+      </ContentSection>
+    </div>
+  </div>
+</BaseLayout>
