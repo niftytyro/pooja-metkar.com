@@ -55,3 +55,40 @@ h4,
 h5 {
   color: #001820;
 }
+
+.blog-title {
+  font-size: 52px;
+  line-height: 76px;
+  font-weight: 400;
+  letter-spacing: 0.022em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000000;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #001820;
+}
+
+.section-content {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  content: #393939;
+}
+
+#vedantu-study-tab-redesign-section {
+  background: linear-gradient(137.92deg, #c3ddef -135.31%, #fefaf5 98.75%);
+}

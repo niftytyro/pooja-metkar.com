@@ -1,0 +1,160 @@
+---
+import "../global.css";
+
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContentSection from "../components/ContentSection.astro";
+import Banner from "../components/Banner.astro";
+import Divider from "../components/Divider.astro";
+
+import BlueStar from "../icons/blue-star.svg";
+
+const usabilityTestingListItems = [
+  "Students found the new study tab easy to use, scrolled through the page quite quickly and started summarising the feedback on their own",
+  "For live class, the most important information sought were the topics covered",
+  "Students wanted an option to set reminder for upcoming classes and tests",
+  "The option to switch batches and de-enrol was quite welcomed as it allowed them to get things done without the help of SAM",
+  "Students found the chapter-wise clustering of information much easier to understand and helpful",
+];
+---
+
+<BaseLayout title="Designing for Everyday Learning">
+  <Header />
+
+  <main class="max-w-desktop-content mx-auto space-y-16 pb-16">
+    <h2 class="mb-4 mt-20 blog-title">Designing for<br />Everyday Learning</h2>
+
+    <ContentSection title="Background">
+      <p class="section-content">
+        Vedantu is an online learning platform that offers interactive classes
+        for students from grades 1–12, with features like live classes, recorded
+        content, tests, assignments, and quizzes. As part of the Learning
+        Experience team, I worked on improving students’ daily experience on the
+        app
+      </p>
+    </ContentSection>
+
+    <ContentSection title="The Problem">
+      <div class="space-y-4">
+        <p class="section-content">
+          The Study Tab, which students see right after logging in, helps them
+          access their daily classes, assignments, tests, and other resources.
+          However, the existing design made it challenging for students to
+          manage their courses and stay on track due to the following issues:
+        </p>
+
+        <ul class="list-disc list-inside section-content space-y-2">
+          <li class="section-content">
+            Poor discoverability of class schedules, syllabus progress, recent
+            assignments
+          </li>
+          <li>
+            Learning materials weren’t aligned with specific chapters or topics,
+            making it difficult for students to engage
+          </li>
+          <li>
+            Information on additional courses or other paid features was not
+            easily available
+          </li>
+        </ul>
+
+        <p class="section-content">
+          To address these, we decided to redesign the Study Tab and Course
+          Details pages to create a more intuitive, organised experience.
+        </p>
+      </div>
+    </ContentSection>
+
+    <ContentSection title="My Role">
+      <p class="section-content">
+        I led the complete redesign of the Study tab and course details from
+        conceptualisation to building information architecture, designing
+        wireframes and final UI.
+      </p>
+    </ContentSection>
+
+    <Banner
+      title="Impact"
+      body="We observed a 40% increase in live class adoption, and participation in monthly tests across all subjects increased by 13%"
+    />
+  </main>
+
+  <div id="vedantu-study-tab-redesign-section" class="pt-16 pb-28">
+    <div class="max-w-desktop-content mx-auto">
+      <ContentSection title="Study Tab Redesign">
+        <p class="section-content mb-24">
+          We emphasized live classes by placing them at the top of the
+          screen.The live class card appears 10 minutes before the class starts.
+          Topics auto-scroll at the bottom of the card adding to the live feel
+          and help students decide whether to attend the class
+          <br /><br />
+          Vedantu's subscription offers a variety of learning options, including
+          year-long programs, chapter-focused short courses, and crash courses. However,
+          students often enroll in multiple courses but engage with only a few. To
+          address this, we redesigned the course cards to help students stay organized
+          and track their progress in each course effectively
+        </p>
+      </ContentSection>
+    </div>
+
+    <div class="max-w-desktop-content-wide mx-auto">
+      <div class="mx-auto grid grid-cols-3 gap-y-20 justify-items-center mb-24">
+        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
+        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
+        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
+        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
+        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
+        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
+      </div>
+
+      <Divider />
+    </div>
+
+    <div class="max-w-desktop-content mx-auto pt-20 pb-[72px]">
+      <ContentSection title="Course details">
+        <p class="section-content">
+          In textbooks, the syllabus is usually divided into chapters and
+          subtopics. We applied a similar structure in the course details, as
+          students are familiar with this.
+          <br /><br />
+          With the new design, students can now see which chapters are in progress,
+          the number of classes they’ve attended / missed, and assignment completion
+          status. They can also view topics covered in each class, which helps them
+          focus on weak areas and watch only relevant replays when revising or preparing
+          for tests.
+        </p>
+      </ContentSection>
+    </div>
+
+    <div class="max-w-desktop-content-wide mx-auto">
+      <div class="mx-auto grid grid-cols-3 gap-y-20 justify-items-center">
+        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
+        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
+        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
+        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
+        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
+        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-desktop-content mx-auto mt-20 mb-20">
+    <ContentSection title="Usability Testing">
+      <p class="section-content mb-6">
+        We conducted 1-on-1 sessions with 10 students to observe how they
+        interact with the prototype. Key findings:
+      </p>
+
+      <div class="space-y-4">
+        {
+          usabilityTestingListItems.map((item) => (
+            <div class="flex flow-row justify-start items-center">
+              <img src={BlueStar.src} />
+              <p class="ml-2 text-black30 section-content">{item}</p>
+            </div>
+          ))
+        }
+      </div>
+    </ContentSection>
+  </div>
+</BaseLayout>
