@@ -1,0 +1,183 @@
+---
+import "../global.css";
+
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContentSection from "../components/ContentSection.astro";
+import ListItem from "../components/loans-research/ListItem.astro";
+import PostIt from "../components/loans-research/PostIt.astro";
+
+import MagicArrow from "../icons/magic-arrow.svg";
+import Quote from "../components/Quote.astro";
+
+const keyInsights = [
+  "Embedding loans prompts within frequent user journeys can boost awareness. This can help keep loans top of mind as users see them in a relevant context",
+  "Users struggle to recall the various loan products offered by Jupiter, as the journeys lack memorability or experiences that truly stand out",
+  "Prior positive experiences with Jupiter, especially around payments and customer support, build strong trust. This makes Jupiter a preferred platform for loans as well",
+  "Users who were initially found ineligible no longer see loan options, which can lead to frustration. Communicating clear eligibility criteria would help them as they may qualify in the future",
+];
+---
+
+<BaseLayout title="Loans Research">
+  <Header />
+
+  <main class="max-w-desktop-content mx-auto space-y-16">
+    <h2 class="text-5xl mb-4 mt-20">Loans Research</h2>
+
+    <ContentSection title="Background & Objective">
+      <p class="text-lg">
+        Since loans is an intent-based product , any funnel improvements often
+        result in only incremental changes. We aimed to understand what
+        influences our users’ decisions when considering loan options, assess
+        their awareness of Jupiter’s loan offerings, and ensure that when they
+        need a loan, Jupiter is top of mind.
+      </p>
+    </ContentSection>
+
+    <ContentSection title="Methodology">
+      <p class="text-lg">
+        We conducted 30-minute in-depth interviews with 19 users across 4
+        selected groups, focusing on their experience with loan products.
+      </p>
+    </ContentSection>
+
+    <ContentSection title="User groups">
+      <div class="border border-black px-6 py-5 rounded mt-4">
+        <ul class="list-disc list-inside space-y-3">
+          <li>
+            Band 1, 2, 3 users - have taken either a mini loan or personal loan
+            within the last 12 months
+          </li>
+          <li>
+            Band 4, 5 users - have taken either a mini loan or personal loan
+            within the last 6 months
+          </li>
+          <li>
+            Band 1, 2, 3 users - entered the funnel within last 3 months but did
+            not take a loan
+          </li>
+          <li>
+            Band 4, 5 users - entered the funnel within last 3 months but did
+            not take a loan
+          </li>
+        </ul>
+      </div>
+    </ContentSection>
+  </main>
+
+  <div class="bg-almondMilk mt-16">
+    <div class="max-w-desktop-content mx-auto space-y-16 py-16">
+      <ContentSection title="Understanding User Mindsets & Preferences">
+        <div class="space-y-6">
+          <p class="text-lg pb-4">
+            We asked users about their awareness of current loan offerings on
+            Jupiter and the factors they consider while making a decision.
+            Current offerings include:
+          </p>
+
+          <ListItem
+            title="Mini loan"
+            trailingText="at 0% interest, repayable within 45 days"
+          />
+
+          <ListItem
+            title="Personal loan"
+            trailingText="from 18% interest with 3 - 24 month EMIs"
+          />
+
+          <ListItem
+            title="Loan against Mutual Funds"
+            trailingText="at 10.5% interest, 36 months tenure"
+          />
+        </div>
+      </ContentSection>
+    </div>
+
+    <div
+      class="flex flex-row justify-center items-stretch space-x-6 max-w-desktop-content-wide mx-auto pb-20"
+    >
+      <PostIt
+        title="Awareness"
+        listItems={[
+          "Users vaguely recall Jupiter’s loan options, benefits, and their approved limits",
+          "Users worry that checking loan eligibility might negatively impact their credit score",
+          "If users’ve had a positive experience on Jupiter, trust is established. In this case, they do not explore other platforms",
+        ]}
+      />
+
+      <PostIt
+        title="Consideration"
+        listItems={[
+          "For small loans, users prefer fintechs due to quick, paperless disbursement",
+          "For larger amounts, they lean towards primary banks due to reliability, especially if pre-approved offers are available",
+          "Users are likely to try new platforms, if they are recommended by friends or family or appear in top search results",
+        ]}
+      />
+
+      <PostIt
+        title="Decision Making"
+        listItems={[
+          "The main decision drivers are loan eligibility and interest rate. If interest rates are higher, users tend to ignore other benefits",
+          "Mini loan is perceived as a ‘debt-free’ solution as it’s easy to repay within a month’s salary",
+          "People prefer having an option to reach out to support via chat or calls rather than just FAQs",
+        ]}
+      />
+    </div>
+  </div>
+
+  <div class="max-w-desktop-content-wide mx-auto my-20">
+    <ContentSection title="Key Insights">
+      <div class="flex flex-row justify-center items-stretch space-x-5 mt-12">
+        {
+          keyInsights.map((insight, index) => (
+            <div class="flex-1">
+              <h4 class="text-looksRed font-medium text-3xl mb-2">
+                0{index + 1}
+              </h4>
+              <p class="text-black30 text-base">{insight}</p>
+            </div>
+          ))
+        }
+      </div>
+
+      <div
+        class="flex flex-col justify-center items-center space-y-6 mt-16 mb-20"
+      >
+        <div class="h-[1px] bg-black w-full"></div>
+        <button class="mx-auto flex space-x-5">
+          <p>Detailed Insights and Documentation</p>
+          <img src={MagicArrow.src} />
+        </button>
+        <div class="h-[1px] bg-black w-full"></div>
+      </div>
+    </ContentSection>
+  </div>
+
+  <div class="mx-11 h-[1000px] bg-black60"></div>
+
+  <div class="max-w-desktop-content mx-auto my-16">
+    <ContentSection title="Insights and Learnings Beyond Data">
+      <p class="text-lg mt-2">
+        Loans research offered a unique lens into users’ lives and the genuine
+        struggles they face. Unlike most product research, this involved
+        understanding their immediate needs and how they approach finances.
+        <br /><br />
+        Hearing their stories firsthand deepened my sense of responsibility as a
+        designer. Each user’s financial journey is unique and I can make a meaningful
+        impact by designing simple, transparent flows, guiding users to the right
+        solutions, and ensuring a sense of security by avoiding dark patterns.
+      </p>
+    </ContentSection>
+
+    <div
+      class="border-black20 border-t border-b py-8 mt-11 flex justify-between space-x-24"
+    >
+      <Quote
+        body="I took a home renovation loan from my primary bank. The loan was backed by an insurance plan. I lost my Job unexpectedly and the insurance company couldn’t cover remaining EMIs because I didn’t have the required proof of job loss."
+      />
+      <Quote
+        body="I don’t have a credit card. There was a family emergency. I took a Mini Loan on Jupiter to book emergency flight tickets."
+      />
+    </div>
+  </div>
+</BaseLayout>

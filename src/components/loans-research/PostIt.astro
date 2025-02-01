@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  listItems: string[];
+}
+
+const { listItems, title } = Astro.props;
+---
+
+<div class="flex-1 bg-white px-6 pt-7 pb-12 rounded-[4px] shadow-xl">
+  <h4 class="text-black text-xl font-medium mb-7">{title}</h4>
+  <div class="space-y-5">
+    {
+      listItems.map((item) => (
+        <div class="flex flex-row space-x-2 text-black30">
+          <p class="text-sm">-</p>
+          <p class="text-base">{item}</p>
+        </div>
+      ))
+    }
+  </div>
+  <p></p>
+</div>

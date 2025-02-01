@@ -1,0 +1,16 @@
+---
+import Quotes from "../icons/quotes.svg";
+
+interface Quote {
+  body: string;
+}
+
+const { body } = Astro.props;
+---
+
+<div class="flex-1">
+  <img src={Quotes.src} class="mb-4" />
+  <p class="text-lg">
+    {body}
+  </p>
+</div>

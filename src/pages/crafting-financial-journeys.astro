@@ -4,7 +4,7 @@ import "../global.css";
 import Banner from "../components/Banner.astro";
 import ContentSection from "../components/ContentSection.astro";
 import Header from "../components/Header.astro";
-import ListItem from "../components/ListItem.astro";
+import Annotation from "../components/Annotation.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const autoPayScreenshotLabels = [
@@ -28,7 +28,7 @@ const disbursalJourneyScreenshots = 18;
 <BaseLayout title="Crafting Financial Journeys">
   <Header />
 
-  <main class="max-w-[896px] mx-auto space-y-16">
+  <main class="max-w-desktop-content mx-auto space-y-16">
     <h2 class="text-5xl mb-4 mt-20">Crafting Financial Journeys</h2>
 
     <ContentSection title="Background">
@@ -60,7 +60,7 @@ const disbursalJourneyScreenshots = 18;
   </main>
 
   <div class="mt-16 py-16 bg-almondMilk20">
-    <div class="max-w-[896px] mx-auto space-y-16">
+    <div class="max-w-desktop-content mx-auto space-y-16">
       <ContentSection title="Simplifying loan selection">
         <p class="text-lg">
           The previous loans tab was cluttered with too many actions, leaving
@@ -92,7 +92,7 @@ const disbursalJourneyScreenshots = 18;
   </div>
 
   <div class="bg-almondMilk">
-    <div class="py-16 max-w-[896px] mx-auto space-y-16">
+    <div class="py-16 max-w-desktop-content mx-auto space-y-16">
       <ContentSection title="Setting up auto-pay">
         <p class="text-lg">
           Users need to add a bank account and set up auto-pay before receiving
@@ -108,17 +108,17 @@ const disbursalJourneyScreenshots = 18;
       class="mx-auto h-[586px] aspect-[1.7]"
     />
 
-    <div class="py-16 max-w-[896px] mx-auto space-y-16">
+    <div class="py-16 max-w-desktop-content mx-auto space-y-16">
       {
         autoPayScreenshotLabels.map((content, index) => (
-          <ListItem index={index + 1} content={content} />
+          <Annotation index={index + 1} content={content} />
         ))
       }
     </div>
   </div>
 
   <div class="bg-almondMilk20">
-    <div class="py-16 max-w-[896px] mx-auto space-y-16">
+    <div class="py-16 max-w-desktop-content mx-auto space-y-16">
       <ContentSection title="Checkout">
         <p class="text-lg">
           After setting up auto-pay, the loan amount was instantly credited to
@@ -137,10 +137,10 @@ const disbursalJourneyScreenshots = 18;
       class="mx-auto h-[586px] aspect-[0.75]"
     />
 
-    <div class="py-16 max-w-[896px] mx-auto space-y-16">
+    <div class="py-16 max-w-desktop-content mx-auto space-y-16">
       {
         checkoutScreenshotLabels.map((content, index) => (
-          <ListItem index={index + 1} content={content} />
+          <Annotation index={index + 1} content={content} />
         ))
       }
     </div>
@@ -148,7 +148,7 @@ const disbursalJourneyScreenshots = 18;
     <div class="h-[0.8px] w-[896px] bg-black20 mx-auto"></div>
 
     <div class="py-16">
-      <div class="max-w-[896px] mx-auto space-y-16">
+      <div class="max-w-desktop-content mx-auto space-y-16">
         <h3 class="text-2xl font-bold mb-2">The Disbursal Journey</h3>
       </div>
 
@@ -170,7 +170,7 @@ const disbursalJourneyScreenshots = 18;
 
     <div class="h-[0.8px] w-[896px] bg-black20 mx-auto"></div>
 
-    <div class="py-16 max-w-[896px] mx-auto space-y-16">
+    <div class="py-16 max-w-desktop-content mx-auto space-y-16">
       <ContentSection title="Simplifying Repayments">
         <p class="text-lg">
           After setting up auto-pay, the loan amount was instantly credited to

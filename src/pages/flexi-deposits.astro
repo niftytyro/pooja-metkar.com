@@ -4,58 +4,70 @@ import "../global.css";
 import Banner from "../components/Banner.astro";
 import Header from "../components/Header.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ContentSection from "../components/ContentSection.astro";
 ---
 
 <BaseLayout title="Flexi Deposits | Case Study">
   <Header />
 
-  <main class="mt-14 mx-auto">
-    <h1 class="font-bold text-[44px] leading-[60px] max-w-3xl mx-auto">
-      Flexi Deposits
-    </h1>
+  <main class="max-w-desktop-content mx-auto space-y-16">
+    <h2 class="text-5xl mb-4 mt-20">Flexi Deposits</h2>
 
-    <section class="max-w-3xl mx-auto">
-      <section class="mt-10">
-        <h3 class="font-bold text-xl leading-8">Background</h3>
+    <ContentSection title="Background">
+      <p class="text-lg">
+        We found that 32% of Fixed Deposits are broken prematurely within 2
+        months of booking. 60% of these deposits were rebooked at 65% of the
+        original amount. Our hypothesis was that users needed money urgently but
+        had no option to withdraw partially. This forced them to break the
+        entire FD and lose earned interest.
+        <br /><br />
+        To solve this, we introduced Flexi FD, a feature that allows users to withdraw
+        partially from their FDs.
+      </p>
+    </ContentSection>
 
-        <p class="mt-2">
-          We found that 32% of Fixed Deposits are broken prematurely within 2
-          months of booking. 60% of these deposits were rebooked at 65% of the
-          original amount. Our hypothesis was that users needed money urgently
-          but had no option to withdraw partially. This forced them to break the
-          entire FD and lose earned interest. To solve this, we introduced Flexi
-          FD, a feature that allows users to withdraw partially from their FDs.
-        </p>
-      </section>
+    <ContentSection title="My Role">
+      <p class="text-lg">
+        I designed the entire experience for booking and managing a Flexi FD
+        from scratch, including its discovery on the homepage and within the FD
+        types. I also conceptualised the branding and animations for the 'How It
+        Works' screen.
+      </p>
+    </ContentSection>
 
-      <section class="mt-10 mb-10">
-        <h3 class="font-bold text-xl leading-8">My Role</h3>
-
-        <p class="mt-2">
-          As a lead on this project, I collaborated with the visual design team
-          to create the product identity and conceptualised illustrations,
-          animations to explain the value propositions. I worked on the landing
-          experience to clearly communicate that the feature applies to all new
-          FDs, also designed the booking flow, dashboard, and the FD breaking
-          flow.
-        </p>
-      </section>
-
-      <Banner title="Impact" body="30% of the deposits booked are Flexi FDs" />
-    </section>
-
-    <section class="bg-gray100 py-14 mt-16">
-      <section class="max-w-3xl mx-auto">
-        <h2 class="font-bold text-[28px] leading-10">
-          Booking a Fixed Deposit
-        </h2>
-
-        <p class="mt-5">
-          Users explore various FD plans with different tenures and interest
-          rates. They can select any FD option and enable the Flexi FD feature,
-          which informs them that their FD will be booked in 3 or 5 equal parts.
-        </p>
-      </section>
-    </section>
+    <Banner
+      title="Impact"
+      body="70% of the deposits booked are Flexi FDs. Flexi FD average amount is 60,000 while a regular FD average amount is 30,000"
+    />
   </main>
+
+  <div class="bg-almondMilk mt-16 py-16">
+    <div class="max-w-desktop-content mx-auto space-y-16">
+      <ContentSection title="Booking a Fixed Deposit">
+        <p class="text-lg">
+          Users can compare different FD options based on interest rates and
+          tenures. To make it clear that any FD can be converted into a Flexi
+          FD, we added a section above the cards.
+          <br /><br />
+          Once the Flexi FD feature is activated, we inform users that their FD will
+          be divided into 3 or 5 equal parts.
+        </p>
+      </ContentSection>
+    </div>
+  </div>
+
+  <div class="max-w-desktop-content my-16 mx-auto space-y-16">
+    <ContentSection title="Dashboard and Breaking Experience">
+      <p class="text-lg">
+        To break an FD, users can select the parts they wish to withdraw, review
+        a summary and proceed. We guide users by clearly displaying how early
+        withdrawals affect interest rates. If they select multiple parts, each
+        part is broken separately. I designed a stepper to help users easily
+        break one part at a time without confusion.
+        <br /><br />
+        Finally on the success screen, we reassure them that the remaining parts
+        of the FD continue to earn interest.
+      </p>
+    </ContentSection>
+  </div>
 </BaseLayout>
