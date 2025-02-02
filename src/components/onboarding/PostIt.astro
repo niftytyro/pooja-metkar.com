@@ -1,0 +1,14 @@
+---
+interface Props {
+  content: string;
+  highlight?: boolean;
+}
+
+const { content, highlight = false } = Astro.props;
+---
+
+<div
+  class={`flex-1 bg-yellow80 p-4 pb-10 min-h-48 ${highlight ? "border border-black onboarding-postit-highlight scale-125 -translate-x-2" : "rounded-[4px]"}`}
+>
+  <p class="text-black30 text-base">{content}</p>
+</div>

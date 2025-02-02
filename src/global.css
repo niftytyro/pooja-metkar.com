@@ -78,6 +78,16 @@ h5 {
   color: #001820;
 }
 
+.cute-heading-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
 .section-content {
   font-size: 16px;
   font-weight: 400;
@@ -89,6 +99,30 @@ h5 {
   content: #393939;
 }
 
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.6000000238418579px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.subheading {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
 #vedantu-study-tab-redesign-section {
   background: linear-gradient(137.92deg, #c3ddef -135.31%, #fefaf5 98.75%);
+}
+
+.onboarding-postit-highlight {
+  box-shadow: 3px 3px 0px 0px #131313;
 }

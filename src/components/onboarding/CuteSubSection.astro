@@ -1,0 +1,18 @@
+---
+import CuteUnderline from "../../illustrations/cute-underline.svg";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div>
+  <div class="cute-heading-title">
+    {title}
+    <img src={CuteUnderline.src} />
+  </div>
+
+  <slot />
+</div>

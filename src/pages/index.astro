@@ -2,10 +2,9 @@
 import "../global.css";
 
 import Header from "../components/Header.astro";
-import CaseStudyCard from "../components/ProjectsLink.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import MagicLink from "../components/MagicLink.astro";
 import ProjectsLink from "../components/ProjectsLink.astro";
+import Divider from "../components/Divider.astro";
 ---
 
 <BaseLayout title="Pooja Metkar">
@@ -35,7 +34,9 @@ import ProjectsLink from "../components/ProjectsLink.astro";
         /> -->
         </div>
 
-        <div class="h-[1px] w-28 mt-6 bg-black"></div>
+        <div class="w-28 mt-6 mx-auto">
+          <Divider />
+        </div>
       </div>
     </section>
 
@@ -67,19 +68,19 @@ import ProjectsLink from "../components/ProjectsLink.astro";
           <ProjectsLink index={1} title="Crafting Financial Journeys" link="" />
         </div>
 
-        <div class="h-[0.65px] bg-saffron"></div>
+        <div class="h-[0.65px] bg-looksRed60"></div>
 
         <div class="px-44">
           <ProjectsLink index={2} title="Flexi Deposits" link="" />
         </div>
 
-        <div class="h-[0.65px] bg-saffron"></div>
+        <div class="h-[0.65px] bg-looksRed60"></div>
 
         <div class="px-44">
           <ProjectsLink index={3} title="Research" link="" />
         </div>
 
-        <div class="h-[0.65px] bg-saffron"></div>
+        <div class="h-[0.65px] bg-looksRed60"></div>
 
         <div class="px-44">
           <ProjectsLink
@@ -89,13 +90,13 @@ import ProjectsLink from "../components/ProjectsLink.astro";
           />
         </div>
 
-        <div class="h-[0.65px] bg-saffron"></div>
+        <div class="h-[0.65px] bg-looksRed60"></div>
 
         <div class="px-44">
           <ProjectsLink index={5} title="Onboarding" link="" />
         </div>
 
-        <div class="h-[1px] bg-saffron"></div>
+        <div class="h-[1px] bg-looksRed60"></div>
 
         <div class="px-44">
           <ProjectsLink index={6} title="Reimagining Assignments" link="" />

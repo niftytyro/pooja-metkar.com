@@ -9,6 +9,7 @@ import PostIt from "../components/loans-research/PostIt.astro";
 
 import MagicArrow from "../icons/magic-arrow.svg";
 import Quote from "../components/Quote.astro";
+import Divider from "../components/Divider.astro";
 
 const keyInsights = [
   "Embedding loans prompts within frequent user journeys can boost awareness. This can help keep loans top of mind as users see them in a relevant context",
@@ -143,12 +144,14 @@ const keyInsights = [
       <div
         class="flex flex-col justify-center items-center space-y-6 mt-16 mb-20"
       >
-        <div class="h-[1px] bg-black w-full"></div>
+        <Divider />
+
         <button class="mx-auto flex space-x-5">
           <p>Detailed Insights and Documentation</p>
           <img src={MagicArrow.src} />
         </button>
-        <div class="h-[1px] bg-black w-full"></div>
+
+        <Divider />
       </div>
     </ContentSection>
   </div>

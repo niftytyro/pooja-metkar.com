@@ -1,0 +1,258 @@
+---
+import "../global.css";
+
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContentSection from "../components/ContentSection.astro";
+import CuteSubSection from "../components/onboarding/CuteSubSection.astro";
+import Banner from "../components/Banner.astro";
+import PostIt from "../components/onboarding/PostIt.astro";
+
+import Grid from "../illustrations/grid.svg";
+import RightArrow from "../icons/right-arrow.svg";
+import CuteExpression from "../illustrations/cute-expression.svg";
+import CurvyArrow from "../illustrations/curvy-arrow.svg";
+import VedantuProfile from "../illustrations/vedantu-profile.svg";
+import SquircleRadio from "../icons/rotated-squircle-radio.svg";
+import Divider from "../components/Divider.astro";
+
+const blogTitle = "Onboarding";
+
+const insights = [
+  "How might we make onboarding personalised for each student?",
+  "How might we reduce the number of queries we get from students?",
+  "How might we use fun and engaging ways to educate about product offerings instead of videos?",
+  "How might we make it easier for students to connect to us for any queries?",
+  "How might we show users how long they have left in onboarding?",
+  "How might we help students understand how to switch a batch?",
+  "How might we make students aware of offerings within their subscription?",
+  "How might we make information around course details, choices  more accessible?",
+  "How might we encourage students to take benchmark tests?",
+  "How might we makes students know where to find their day to day tasks?",
+  "How might we help students select teachers of their choice?",
+  "How might we help students get visibility on language being taught in class?",
+];
+
+const finalDesigns = [
+  "/public/vedantu-onboarding/Getting started.png",
+  "/public/vedantu-onboarding/Primary courses in the subscription.png",
+  "/public/vedantu-onboarding/Students can explore other batches.png",
+  "/public/vedantu-onboarding/Upcoming schedule.png",
+  "/public/vedantu-onboarding/Benchmark test explained.png",
+  "/public/vedantu-onboarding/Feature walkthrough.png",
+  "/public/vedantu-onboarding/Introducing replays feature.png",
+  "/public/vedantu-onboarding/The top progress bar shows how far along you are in onboarding.png",
+  "/public/vedantu-onboarding/Home > Quick Links > Replays.png",
+  "/public/vedantu-onboarding/Introducing Doubts feature.png",
+  "/public/vedantu-onboarding/Home > Quick links > Ask a doubt.png",
+  "/public/vedantu-onboarding/Ready to begin.png",
+];
+
+const usabilityTestingKeyFindings = [
+  "Some students struggled to understand terms like primary courses.  When explained as enrolled courses, they understood it better.",
+  "Students preferred images over text for navigating features",
+  "They wanted clear information about topics and syllabus covered for benchmark tests.",
+  "Students found the new onboarding visually appealing and better than the existing one. They especially liked the teacher avatar, colours and Q&A format",
+];
+---
+
+<BaseLayout title={blogTitle}>
+  <Header />
+
+  <main class="max-w-desktop-content mx-auto space-y-16 pb-16">
+    <h2 class="mb-4 mt-20 blog-title">{blogTitle}</h2>
+
+    <ContentSection title="Background">
+      <p class="section-content">
+        The existing student onboarding journey had several gaps. It was only
+        available on the website and onboarding video completion rate was as low
+        as 10%. Onboarding didn’t guide students on managing courses, navigating
+        the platform, or accessing daily tasks.
+        <br /><br />
+        50% of the queries were related to these issues. Student Academic Mentors
+        (SAMs) spent significant time helping students with course management, schedules,
+        and study materials, yet overall student satisfaction was only 4.64 / 10.
+      </p>
+    </ContentSection>
+
+    <ContentSection title="Our Objectives">
+      <div class="space-y-8">
+        <p class="section-content">
+          Using existing data, we identified the key tasks students need to
+          complete during their first few weeks at Vedantu. This helped us
+          define goals to improve the onboarding experience
+        </p>
+
+        <CuteSubSection title="User Goals">
+          <ul class="list-disc list-inside space-y-2 mt-4">
+            <li>Simplify batch switching when needed</li>
+            <li>
+              Help students understand the different offerings available on
+              Vedantu
+            </li>
+            <li>Set context for upcoming tasks and preparations</li>
+          </ul>
+        </CuteSubSection>
+
+        <CuteSubSection title="Business Goals">
+          <ul class="list-disc list-inside space-y-2 mt-4">
+            <li>
+              Reduce user incidents, lowering the cost of call resolution for
+              SAM and Customer Care teams
+            </li>
+            <li>
+              Improve the NPS score by minimising friction in the early days of
+              paid user journey
+            </li>
+          </ul>
+        </CuteSubSection>
+      </div>
+    </ContentSection>
+
+    <Banner title="Impact">
+      <p class="ml-9">
+        Support tickets about batch timings dropped from 30% to 25% in a month,
+        and students managing batch switches on their own increased from 7% to
+        9%
+        <br /><br />
+        An A/B test showed that only 8% of those using the old flow completed onboarding
+        (1384 students), compared to 58% completion for the new flow (1100 students)
+      </p>
+    </Banner>
+  </main>
+
+  <div class="w-full relative">
+    <img src={Grid.src} class="w-full absolute -z-10" />
+
+    <div class="max-w-desktop-content mx-auto py-14 z-10">
+      <ContentSection title="Design Sprint for Ideation">
+        <p class="section-content mt-1">
+          We conducted a remote design sprint to align on goals and collectively
+          decide an approach to solve the issues faced by students
+        </p>
+      </ContentSection>
+    </div>
+
+    <div class="mx-72 grid grid-cols-6 justify-items-center gap-6 z-10">
+      {
+        insights.map((insight, index) => (
+          <PostIt content={insight} highlight={index === 2} />
+        ))
+      }
+    </div>
+
+    <button
+      class="px-6 py-3 border border-black rounded-lg my-12 mx-auto bg-white flex justify-center items-center gap-x-5"
+    >
+      View all findings and insights from the sprint
+      <img src={RightArrow.src} />
+    </button>
+  </div>
+
+  <section class="bg-notPink pt-20 pb-48">
+    <div class="max-w-desktop-content mx-auto relative">
+      <div class="flex-1 pr-44">
+        <img
+          src={CuteExpression.src}
+          class="relative -translate-x-full translate-y-2"
+        />
+        <h3 class="section-title font-bold mb-3">Approach</h3>
+
+        <p class="section-content">
+          We wanted to help students with their courses and also highlight key
+          features as they explored the platform.
+          <br /><br />
+          To make the process engaging and more personal, we created an avatar inspired
+          by Vedantu teachers. The avatar helps build a connection with students
+          by introducing features in a fun and interactive way, using simple questions
+          and answers.
+        </p>
+      </div>
+
+      <div class="flex absolute right-0">
+        <img src={CurvyArrow.src} />
+        <img src={VedantuProfile.src} />
+      </div>
+    </div>
+  </section>
+
+  <div class="bg-yellow60 py-20">
+    <div class="max-w-desktop-content mx-auto">
+      <ContentSection title="Final Designs">
+        <p class="section-content">
+          We start by showing students the main courses included in their
+          subscription, allowing them to switch batches if class timings don’t
+          work for them.
+          <br /><br />
+          Next, we display their schedule for the first week to set expectations.
+          Core features are introduced through fun, interactive Q&A. At the final
+          step of onboarding, we remind students of their first class time, preparing
+          them for their first task.
+        </p>
+
+        <div class="pt-16 grid grid-cols-3 gap-x-14 gap-y-20">
+          {
+            finalDesigns.map((each) => (
+              <div>
+                <img src={each} />
+                <p class="label uppercase text-black80 px-4">
+                  {each.substring(
+                    each.lastIndexOf("/") + 1,
+                    each.indexOf(".png"),
+                  )}
+                </p>
+              </div>
+            ))
+          }
+        </div>
+      </ContentSection>
+    </div>
+  </div>
+
+  <div class="max-w-desktop-content mx-auto py-20">
+    <ContentSection title="Usability Testing">
+      <p class="section-content">
+        We conducted usability tests with 20 students in two cohorts to gather
+        feedback on the new flow and check if they could complete the intended
+        actions.
+      </p>
+
+      <ul class="section-content list-disc list-inside pt-3 space-y-2">
+        <li>
+          Cohort 1 - 10 Students, new to Vedantu, with less than 2 weeks of
+          platform usage
+        </li>
+        <li>
+          Cohort 2 - 10 Students with more than 3 months of platform usage
+        </li>
+      </ul>
+
+      <div class="pt-12">
+        <CuteSubSection title="Key Findings">
+          <div class="space-y-5 pt-6">
+            {
+              usabilityTestingKeyFindings.map((finding) => (
+                <div class="flex items-center space-x-4">
+                  <img src={SquircleRadio.src} />
+                  <p class="section-content">{finding}</p>
+                </div>
+              ))
+            }
+          </div>
+        </CuteSubSection>
+      </div>
+    </ContentSection>
+
+    <div class="py-16"><Divider /></div>
+
+    <ContentSection title="Overall Feedback">
+      <p class="section-content">
+        Students found the new onboarding visually appealing and better than the
+        existing one. They especially liked the teacher avatar, colours, Q&A
+        format and first week schedule.
+        <br /><br />
+        Average rating for new design - 4.6/5 (based on 20 ratings)
+      </p>
+    </ContentSection>
+  </div>
+</BaseLayout>
