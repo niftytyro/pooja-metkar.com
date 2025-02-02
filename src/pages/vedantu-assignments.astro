@@ -1,0 +1,148 @@
+---
+import "../global.css";
+
+import BlueStar from "../icons/blue-star.svg";
+
+import Banner from "../components/Banner.astro";
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContentSection from "../components/ContentSection.astro";
+import Annotation from "../components/Annotation.astro";
+import Divider from "../components/Divider.astro";
+
+const objectives = [
+  "Enable progress tracking and show students how they compare with peers",
+  "Allow students to view solutions and revise concepts",
+  "Increase the assignment attempt rate by at least 10%",
+];
+
+const screenshotLabels = [
+  "On the landing page, students see key details like the total number of questions, estimated completion time, total no. of topics covered",
+  "Showing covered topics helps students prepare before attempting the assignment.",
+  "We provided clear instructions above answer options to avoid confusion. E.g. Choose only one answer, Enter only numeric values",
+  "A ‘Report Error’ option allows students to flag questions with issues",
+  "Students can skip difficult questions, allowing them to manage their time more efficiently",
+];
+
+const solutionsReviewScreenshotLabels = [
+  "Students can now check answers and view solutions for each question",
+  "Solutions include key concepts to help students with quick revision",
+  "Since assignments aren’t graded, we added peer comparison cues like ‘% of students who got this right’, for motivation ",
+];
+
+const solutionsReviewScreenshotLabels2 = [
+  "The question panel shows the status of each question -- attempted, correct, incorrect, skipped -- keeping the system status visible.",
+  "Before exiting, students see a performance summary, along with a message that their progress is saved. This helps encourage students to complete assignments later.",
+];
+---
+
+<BaseLayout title="Assignments">
+  <Header />
+
+  <main class="max-w-desktop-content mx-auto space-y-16">
+    <h2 class="blog-title mb-4 mt-20">Assignments</h2>
+
+    <ContentSection title="Background">
+      <p class="text-lg">
+        Assignments are sets of practice questions covering multiple topics
+        within a chapter or subject. The adoption rate for assignments was below
+        10% due to a number of issues.
+        <br /><br />
+        The interface resembled a PDF, making it unclear that assignments were interactive.
+        Student couldn’t see solutions, decimal numbers couldn’t be entered for numeric
+        answers. There was no way to track progress of attempted assignments.
+      </p>
+    </ContentSection>
+
+    <ContentSection title="Objective">
+      <p class="text-lg">
+        We decided to create an interactive platform that supports various
+        question types: multiple-choice, subjective, numeric, and diagrammatic.
+      </p>
+
+      <div class="space-y-4">
+        {
+          objectives.map((item) => (
+            <div class="flex flow-row justify-start items-center">
+              <img src={BlueStar.src} />
+              <p class="ml-2 text-black30 section-content">{item}</p>
+            </div>
+          ))
+        }
+      </div>
+    </ContentSection>
+
+    <ContentSection title="Background">
+      <p class="section-content pb-[72px]">
+        UX Design, Interaction Design, Prototyping, Usability Testing, UI Design
+      </p>
+
+      <Banner
+        title="Impact"
+        body="70% of the deposits booked are Flexi FDs. Flexi FD average amount is 60,000 while a regular FD average amount is 30,000"
+      />
+    </ContentSection>
+  </main>
+
+  <section id="vedantu-highlight-section" class="mt-16 py-16">
+    <div class="max-w-desktop-content mx-auto">
+      <h2 class="section-title">An All-New Assignments Platform</h2>
+    </div>
+
+    <div class="max-w-desktop-content-wide mx-auto pt-16 pb-12">
+      <img src="/public/vedantu-assignments/screenshots.png" />
+    </div>
+
+    <div class="max-w-desktop-content mx-auto space-y-6">
+      {
+        screenshotLabels.map((content, index) => (
+          <Annotation index={index + 1} content={content} />
+        ))
+      }
+    </div>
+
+    <div class="max-w-desktop-content mx-auto py-16"><Divider /></div>
+
+    <div class="max-w-desktop-content mx-auto">
+      <h2 class="section-title">Solution Review</h2>
+    </div>
+
+    <div class="max-w-desktop-content-wide mx-auto pt-16 pb-12">
+      <img src="/public/vedantu-assignments/solution-review-screenshots.png" />
+    </div>
+
+    <div class="max-w-desktop-content mx-auto space-y-6">
+      {
+        solutionsReviewScreenshotLabels.map((content, index) => (
+          <Annotation index={index + 1} content={content} />
+        ))
+      }
+    </div>
+
+    <div class="max-w-desktop-content mx-auto py-16"><Divider /></div>
+
+    <div class="max-w-desktop-content-wide mx-auto pt-16 pb-12">
+      <img
+        src="/public/vedantu-assignments/solution-review-screenshots-2.png"
+      />
+    </div>
+
+    <div class="max-w-desktop-content mx-auto space-y-6">
+      {
+        solutionsReviewScreenshotLabels2.map((content, index) => (
+          <Annotation index={index + 1} content={content} />
+        ))
+      }
+    </div>
+
+    <div class="max-w-desktop-content mx-auto py-16"><Divider /></div>
+
+    <div class="max-w-desktop-content mx-auto">
+      <h2 class="section-title">Designing for Desktop Users</h2>
+    </div>
+
+    <div class="max-w-desktop-content-wide mx-auto mt-14">
+      <div class="w-full h-[600px] rounded-2xl bg-white"></div>
+    </div>
+  </section>
+</BaseLayout>
