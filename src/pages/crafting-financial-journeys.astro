@@ -7,20 +7,28 @@ import Header from "../components/Header.astro";
 import Annotation from "../components/Annotation.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Divider from "../components/Divider.astro";
+import MagicArrow from "../icons/magic-arrow.svg";
 
-const autoPayScreenshotLabels = [
+const autoPayScreenshotAnnotationss = [
   "Specify the exact amount users will get, allowing dropped off users adjust the loan amount later",
   "A note to clarify that users must use a single account for loan disbursal and repayments",
   "Clearly explain that auto-pay is required for EMI payments, including the EMI date and account",
   "We recommend using debit card details option as it has higher success rate",
 ];
 
-const checkoutScreenshotLabels = [
+const checkoutScreenshotAnnotationss = [
   "Clearly state that the loan amount will be credited after confirming details to reduce user anxiety",
   "Allow dropped-off users to adjust the loan amount at the final step for added flexibility",
   "We Highlight only key details upfront, with an info icon for users to view full calculations for transparency",
   "We show the first EMI date, which may change based on whether users complete the process in one go or return later",
   "Emphasize the account for loan disbursal on the checkout screen as it’s crucial for users",
+];
+
+const simplifyingRepaymentAnnotations = [
+  "In the new design, upcoming EMI details are prominently displayed at the top of the Loans tab, including the due amount, EMI schedule, and auto-debit account. To reduce user anxiety, we added clear, reassuring copy that states the EMI will be auto-debited on a specific date",
+  "Users can now easily track their loan status. Key information like the amount paid, remaining balance, number of EMIs paid vs left, and the last EMI date is displayed",
+  "Consolidated all repayment options like Advance EMI, Foreclosure & Part-prepayment in one location, allowing users to choose how they want to repay",
+  "Showing only essential details like payable amount",
 ];
 
 const disbursalJourneyScreenshots = 18;
@@ -60,7 +68,7 @@ const disbursalJourneyScreenshots = 18;
     />
   </main>
 
-  <div class="mt-16 py-16 bg-almondMilk20">
+  <div class="mt-16 py-16 bg-almondMilk40">
     <div class="max-w-desktop-content mx-auto space-y-16">
       <ContentSection title="Simplifying loan selection">
         <p class="text-lg">
@@ -92,7 +100,7 @@ const disbursalJourneyScreenshots = 18;
     </div>
   </div>
 
-  <div class="bg-almondMilk">
+  <div class="bg-almondMilk20">
     <div class="py-16 max-w-desktop-content mx-auto space-y-16">
       <ContentSection title="Setting up auto-pay">
         <p class="text-lg">
@@ -109,16 +117,16 @@ const disbursalJourneyScreenshots = 18;
       class="mx-auto h-[586px] aspect-[1.7]"
     />
 
-    <div class="py-16 max-w-desktop-content mx-auto space-y-16">
+    <div class="py-16 max-w-desktop-content mx-auto space-y-8">
       {
-        autoPayScreenshotLabels.map((content, index) => (
+        autoPayScreenshotAnnotationss.map((content, index) => (
           <Annotation index={index + 1} content={content} />
         ))
       }
     </div>
   </div>
 
-  <div class="bg-almondMilk20">
+  <div class="bg-almondMilk40">
     <div class="py-16 max-w-desktop-content mx-auto space-y-16">
       <ContentSection title="Checkout">
         <p class="text-lg">
@@ -138,9 +146,9 @@ const disbursalJourneyScreenshots = 18;
       class="mx-auto h-[586px] aspect-[0.75]"
     />
 
-    <div class="py-16 max-w-desktop-content mx-auto space-y-16">
+    <div class="py-16 max-w-desktop-content mx-auto space-y-8">
       {
-        checkoutScreenshotLabels.map((content, index) => (
+        checkoutScreenshotAnnotationss.map((content, index) => (
           <Annotation index={index + 1} content={content} />
         ))
       }
@@ -178,15 +186,42 @@ const disbursalJourneyScreenshots = 18;
     <div class="py-16 max-w-desktop-content mx-auto space-y-16">
       <ContentSection title="Simplifying Repayments">
         <p class="text-lg">
-          After setting up auto-pay, the loan amount was instantly credited to
-          users' accounts, often without them realising it. Users didn’t have a
-          chance to review the details before disbursement. This led to 30%
-          users foreclosing loans within first 3 days.
+          Our earlier repayment flows had confusing information, leading to the
+          highest number of CS tickets. Users felt anxious about their EMI
+          payments because they couldn’t clearly understand the exact amount
+          due, payment dates, auto-debit timelines, or which account the money
+          would be debited from.
           <br /><br />
-          To address this, we added a checkout screen for users to confirm details
-          before loan disbursement
+          Additionally, users couldn’t access their EMI schedules or track repayments.
+          Based on this feedback, we decided to redesign repayment journey
         </p>
       </ContentSection>
+    </div>
+
+    <div class="max-w-desktop-content-wide mx-auto">
+      <img
+        src="/crafting-financial-journeys/simplifying-repayments.png"
+        class="mx-auto h-[620px] aspect-[1.4]"
+      />
+    </div>
+
+    <div class="py-16 max-w-desktop-content mx-auto space-y-8">
+      {
+        simplifyingRepaymentAnnotations.map((content, index) => (
+          <Annotation index={index + 1} content={content} />
+        ))
+      }
+    </div>
+
+    <div class="max-w-desktop-content-wide mx-auto space-y-6 pt-16 pb-40">
+      <Divider />
+
+      <button class="mx-auto flex space-x-5">
+        <p>Detailed Insights and Documentation</p>
+        <img src={MagicArrow.src} />
+      </button>
+
+      <Divider />
     </div>
   </div>
 </BaseLayout>
