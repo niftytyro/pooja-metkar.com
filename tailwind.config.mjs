@@ -18,8 +18,9 @@ export default {
       gray100: "#F0EFEC",
       looksRed: "#E06513",
       looksRed60: "#F4CCCC",
-      almondMilk: "#F6F3EC",
-      almondMilk20: "#FBFAF8",
+      almondMilk: "#F2EDE8",
+      almondMilk20: "#F6F3EC",
+      almondMilk40: "#FBFAF8",
       notPink: "#EFECFD",
     },
     extend: {
