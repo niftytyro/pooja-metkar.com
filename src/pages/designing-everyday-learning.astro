@@ -5,9 +5,10 @@ import Header from "../components/Header.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ContentSection from "../components/ContentSection.astro";
 import Banner from "../components/Banner.astro";
-import Divider from "../components/Divider.astro";
 
 import BlueStar from "../icons/blue-star.svg";
+import Annotation from "../components/Annotation.astro";
+import Divider from "../components/Divider.astro";
 
 const usabilityTestingListItems = [
   "Students found the new study tab easy to use, scrolled through the page quite quickly and started summarising the feedback on their own",
@@ -15,6 +16,47 @@ const usabilityTestingListItems = [
   "Students wanted an option to set reminder for upcoming classes and tests",
   "The option to switch batches and de-enrol was quite welcomed as it allowed them to get things done without the help of SAM",
   "Students found the chapter-wise clustering of information much easier to understand and helpful",
+];
+
+const studyRedesignAnnotations = [
+  "The live class card features the teacher's photo as the hero image. When students spot their favorite teacher’s photo, it acts as a subtle nudge, making them more likely to join the class without overthinking",
+  "Displaying a live timer helps students join on time and enhances the real-time feel of the live class card",
+  "Auto-scrolling topics in the bottom strip further enhance the live experience",
+  "Next, we show upcoming classes which helps students plan their time effectively and prepare for sessions if required",
+];
+
+const myCoursesAnnotations = [
+  'The "My Courses" section highlights the primary courses in a subscription, helping students stay on track with key courses',
+  "The course card displays recent classes, allowing students to join live sessions or watch missed  class replays",
+  "Students can also attempt new assignments directly from here",
+  "Course details are accessible from the card, making progress tracking easier",
+];
+
+const courseDetails = [
+  {
+    image: "/designing-everyday-learning/course-details/overview.png",
+    caption: "Course Overview: all chapters neatly organised",
+  },
+  {
+    image: "/designing-everyday-learning/course-details/current-progress.png",
+    caption: "Ongoing Chapter: Check current chapter’s progress",
+  },
+  {
+    image: "/designing-everyday-learning/course-details/upcoming-chapters.png",
+    caption: "Upcoming Chapters: View topics in advance or set reminders",
+  },
+  {
+    image: "/designing-everyday-learning/course-details/assignments.png",
+    caption: "Assignment Status: Track assignments for each chapter",
+  },
+  {
+    image: "/designing-everyday-learning/course-details/tests.png",
+    caption: "Tests: Find all course-related tests in one place",
+  },
+  {
+    image: "/designing-everyday-learning/course-details/batch-details.png",
+    caption: "Batch Details: Students can Switch to a suitable batch",
+  },
 ];
 ---
 
@@ -82,35 +124,65 @@ const usabilityTestingListItems = [
   <div id="vedantu-highlight-section" class="pt-16 pb-28">
     <div class="max-w-desktop-content mx-auto">
       <ContentSection title="Study Tab Redesign">
-        <p class="section-content mb-24">
+        <p class="section-content mb-16">
           We emphasized live classes by placing them at the top of the
           screen.The live class card appears 10 minutes before the class starts.
           Topics auto-scroll at the bottom of the card adding to the live feel
           and help students decide whether to attend the class
-          <br /><br />
-          Vedantu's subscription offers a variety of learning options, including
-          year-long programs, chapter-focused short courses, and crash courses. However,
-          students often enroll in multiple courses but engage with only a few. To
-          address this, we redesigned the course cards to help students stay organized
-          and track their progress in each course effectively
         </p>
+
+        <div class="w-full flex flex-row justify-between space-x-9">
+          <img
+            src="/designing-everyday-learning/study-tab-redesign/upcoming-class-topics.png"
+            class="w-screenshot-md"
+          />
+          <img
+            src="/designing-everyday-learning/study-tab-redesign/landing.png"
+            class="flex-1 w-[320px]"
+          />
+          <img
+            src="/designing-everyday-learning/study-tab-redesign/upcoming-class-topics.png"
+            class="w-screenshot-md"
+          />
+        </div>
+
+        <div class="pt-12 space-y-8">
+          {
+            studyRedesignAnnotations.map((content, index) => (
+              <Annotation index={index + 1} content={content} />
+            ))
+          }
+        </div>
       </ContentSection>
-    </div>
 
-    <div class="max-w-desktop-content-wide mx-auto">
-      <div class="mx-auto grid grid-cols-3 gap-y-20 justify-items-center mb-24">
-        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
-        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
-        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
-        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
-        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
-        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
-      </div>
+      <div class="my-16"><Divider /></div>
 
-      <Divider />
-    </div>
+      <ContentSection title="Keep Up with Your Courses">
+        <p class="section-content">
+          Vedantu's subscription offers a variety of learning options, including
+          year-long programs, chapter-focused short courses, and crash courses.
+          However, students often enroll in multiple courses but engage with
+          only a few. To address this, we redesigned the course cards to help
+          students stay organized and track their progress in each course
+          effectively
+        </p>
 
-    <div class="max-w-desktop-content mx-auto pt-20 pb-[72px]">
+        <img
+          src="/designing-everyday-learning/my-courses.png"
+          class="w-[384px] mx-auto mt-16"
+        />
+
+        <div class="pt-12 space-y-8">
+          {
+            myCoursesAnnotations.map((content, index) => (
+              <Annotation index={index + 1} content={content} />
+            ))
+          }
+        </div>
+      </ContentSection>
+
+      <div class="my-16"><Divider /></div>
+
       <ContentSection title="Course details">
         <p class="section-content">
           In textbooks, the syllabus is usually divided into chapters and
@@ -123,22 +195,27 @@ const usabilityTestingListItems = [
           focus on weak areas and watch only relevant replays when revising or preparing
           for tests.
         </p>
-      </ContentSection>
-    </div>
 
-    <div class="max-w-desktop-content-wide mx-auto">
-      <div class="mx-auto grid grid-cols-3 gap-y-20 justify-items-center">
-        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
-        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
-        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
-        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
-        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
-        <div class="w-64 h-[512px] bg-white rounded-2xl"></div>
-      </div>
+        <div class="grid grid-cols-3 gap-y-16 py-16">
+          {
+            courseDetails.map((course) => (
+              <div class="w-screenshot ">
+                <img
+                  src={course.image}
+                  class="w-screenshot rounded-2xl shadow-screenshot"
+                />
+                <p class="caption2 pt-6 uppercase text-black80">
+                  {course.caption}
+                </p>
+              </div>
+            ))
+          }
+        </div>
+      </ContentSection>
     </div>
   </div>
 
-  <div class="max-w-desktop-content mx-auto mt-20 mb-20">
+  <div class="max-w-desktop-content mx-auto mt-20 mb-32">
     <ContentSection title="Usability Testing">
       <p class="section-content mb-6">
         We conducted 1-on-1 sessions with 10 students to observe how they

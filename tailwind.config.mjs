@@ -34,10 +34,12 @@ export default {
         "desktop-content-wide": 1080,
       },
       width: {
-        screenshot: "270px",
+        screenshot: "230px",
+        "screenshot-md": "270px",
       },
       height: {
-        screenshot: "584px",
+        screenshot: "502px",
+        "screenshot-md": "584px",
       },
       boxShadow: {
         screenshot: "0px 5px 14px 0px #0000001F",

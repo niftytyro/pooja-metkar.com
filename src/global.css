@@ -139,6 +139,13 @@ h5 {
   letter-spacing: -1%;
 }
 
+.caption2 {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+}
+
 #vedantu-highlight-section {
   background: linear-gradient(137.92deg, #c3ddef -135.31%, #fefaf5 98.75%);
 }
