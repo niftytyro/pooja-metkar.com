@@ -14,6 +14,7 @@ export default {
       yellow40: "#ECB81C",
       yellow60: "#FCECDC",
       yellow80: "#FDF0CF",
+      yellow90: "#FDF8DA",
       yellow100: "#FFFBF0",
       gray100: "#F0EFEC",
       looksRed: "#E06513",

@@ -133,7 +133,7 @@ const usabilityTestingKeyFindings = [
       </ContentSection>
     </div>
 
-    <div class="mx-72 grid grid-cols-6 justify-items-center gap-6 z-10">
+    <div class="mx-72 grid grid-cols-6 justify-items-center gap-6 z-10 mt-7">
       {
         insights.map((insight, index) => (
           <PostIt content={insight} highlight={index === 2} />
@@ -142,14 +142,14 @@ const usabilityTestingKeyFindings = [
     </div>
 
     <button
-      class="px-6 py-3 border border-black rounded-lg my-12 mx-auto bg-white flex justify-center items-center gap-x-5"
+      class="px-6 py-3 border border-black rounded-lg mt-12 mb-28 mx-auto bg-white flex justify-center items-center gap-x-5"
     >
       View all findings and insights from the sprint
       <img src={RightArrow.src} />
     </button>
   </div>
 
-  <section class="bg-notPink pt-20 pb-48">
+  <section class="bg-white pt-20 pb-48">
     <div class="max-w-desktop-content mx-auto relative">
       <div class="flex-1 pr-44">
         <img
@@ -176,7 +176,7 @@ const usabilityTestingKeyFindings = [
     </div>
   </section>
 
-  <div class="bg-yellow60 py-20">
+  <div class="bg-yellow90 py-20">
     <div class="max-w-desktop-content mx-auto">
       <ContentSection title="Final Designs">
         <p class="section-content">
@@ -254,5 +254,7 @@ const usabilityTestingKeyFindings = [
         Average rating for new design - 4.6/5 (based on 20 ratings)
       </p>
     </ContentSection>
+
+    <div class="py-16"><Divider /></div>
   </div>
 </BaseLayout>
