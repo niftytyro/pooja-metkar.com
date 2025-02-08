@@ -1,0 +1,29 @@
+---
+import QuotesSvg from "../../icons/quotes.svg";
+
+interface Props {
+  quotes: { quote: string; author: string }[];
+}
+
+const { quotes: _quotes } = Astro.props;
+
+const quotes = _quotes.map((each) => each.quote);
+const authors = _quotes.map((each) => each.author);
+---
+
+<div class="flex flex-row items-stretch gap-x-28">
+  {
+    quotes.map((quote, idx) => (
+      <div class="flex flex-col justify-between flex-1">
+        <div class="flex-1">
+          <img src={QuotesSvg.src} class="mb-4" />
+          <p class="section-content">{quote}</p>
+        </div>
+
+        <p class="mt-4 text-base font-semibold leading-7 tracking-tight">
+          {authors[idx]}
+        </p>
+      </div>
+    ))
+  }
+</div>

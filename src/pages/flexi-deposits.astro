@@ -5,6 +5,18 @@ import Banner from "../components/Banner.astro";
 import Header from "../components/Header.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ContentSection from "../components/ContentSection.astro";
+import Annotation from "../components/Annotation.astro";
+
+const userJourneyAnnotations = [
+  "The dashboard shows the current value of all FDs vs the total invested amount, interest earned",
+  "Users can view active and closed FDs and book a new FD easily",
+  "Clicking on an active FD opens its details, showing the current value, maturity amount, time left, auto-renewal date. For Flexi FDs, we added status of each part - active/withdrawn",
+  "When breaking a Flexi FD, users can select only the part they want to withdraw",
+  "We show a withdrawal summary to explain interest calculations and the final amount, helping users make informed decisions",
+  "The total amount including interest is highlighted at the bottom",
+  "If users select multiple parts, each part has to be broken separately. I designed a stepper to help users easily withdraw one part at a time without confusion ",
+  "On the withdrawal success screen, we highlight the total amount received and the breakdown from each part",
+];
 ---
 
 <BaseLayout title="Flexi Deposits | Case Study">
@@ -50,22 +62,56 @@ import ContentSection from "../components/ContentSection.astro";
           parts. Users can choose to withdraw any part based on amount they
           need. The remaining parts continue to earn interest until maturity.
         </p>
+
+        <img
+          src="/flexi-deposits/cvp.png"
+          class="mx-auto mt-16 mb-6 w-screenshot"
+        />
       </ContentSection>
     </div>
   </div>
 
-  <div class="max-w-desktop-content my-16 mx-auto space-y-16">
-    <ContentSection title="Dashboard and Breaking Experience">
-      <p class="section-content">
-        To break an FD, users can select the parts they wish to withdraw, review
-        a summary and proceed. We guide users by clearly displaying how early
-        withdrawals affect interest rates. If they select multiple parts, each
-        part is broken separately. I designed a stepper to help users easily
-        break one part at a time without confusion.
-        <br /><br />
-        Finally on the success screen, we reassure them that the remaining parts
-        of the FD continue to earn interest.
-      </p>
-    </ContentSection>
+  <div class="space-y-16 bg-almondMilk40 py-16">
+    <div class="max-w-desktop-content mx-auto">
+      <ContentSection title="Booking a Fixed Deposit">
+        <p class="section-content">
+          Users can compare different FD options based on interest rates and
+          tenures. To make it clear that any FD can be converted into a Flexi
+          FD, we added a section above the cards.
+          <br /><br />
+          Once the Flexi FD feature is activated, we inform users that their FD will
+          be divided into 3 or 5 equal parts.
+        </p>
+
+        <div
+          class="w-screenshot h-screenshot bg-black120 mx-auto mt-16 mb-6 rounded-2xl"
+        >
+        </div>
+      </ContentSection>
+    </div>
+  </div>
+
+  <div class="space-y-16 bg-almondMilk20 py-16">
+    <div class="max-w-desktop-content mx-auto">
+      <ContentSection title="FD Overview and Withdrawal Journey">
+        <p class="section-content">
+          To break an FD, users can select the parts they wish to withdraw,
+          review a summary and proceed. We guide users by clearly displaying how
+          early withdrawals affect interest rates.
+        </p>
+      </ContentSection>
+    </div>
+
+    <div class="max-w-desktop-content-wide mx-auto pb-24">
+      <img src="/flexi-deposits/user-journey.png" class="" />
+
+      <div class="space-y-8 mt-16">
+        {
+          userJourneyAnnotations.map((content, index) => (
+            <Annotation index={index + 1} content={content} />
+          ))
+        }
+      </div>
+    </div>
   </div>
 </BaseLayout>

@@ -22,15 +22,25 @@ export default {
       almondMilk20: "#F6F3EC",
       almondMilk40: "#FBFAF8",
       notPink: "#EFECFD",
+      transparent: "#00000000",
     },
     extend: {
       fontFamily: {
         sans: ["Manrope", "sans-serif"],
-        magic: ["Are You Serious"],
+        magic: ["SVN-Radiant Slender"],
       },
       maxWidth: {
         "desktop-content": 896,
-        "desktop-content-wide": 1048,
+        "desktop-content-wide": 1080,
+      },
+      width: {
+        screenshot: "270px",
+      },
+      height: {
+        screenshot: "584px",
+      },
+      boxShadow: {
+        screenshot: "0px 5px 14px 0px #0000001F",
       },
     },
   },

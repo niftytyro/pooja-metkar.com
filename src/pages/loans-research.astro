@@ -8,8 +8,8 @@ import ListItem from "../components/loans-research/ListItem.astro";
 import PostIt from "../components/loans-research/PostIt.astro";
 
 import MagicArrow from "../icons/magic-arrow.svg";
-import Quote from "../components/Quote.astro";
 import Divider from "../components/Divider.astro";
+import Quotes from "../components/loans-research/Quotes.astro";
 
 const keyInsights = [
   "Embedding loans prompts within frequent user journeys can boost awareness. This can help keep loans top of mind as users see them in a relevant context",
@@ -156,31 +156,192 @@ const keyInsights = [
     </ContentSection>
   </div>
 
-  <div class="mx-11 h-[1000px] bg-black60"></div>
+  <div class="max-w-desktop-content-wide mx-auto my-16">
+    <ContentSection title="Recommendations">
+      <div class="w-full bg-almondMilk20 px-24 py-14 mt-10">
+        <ContentSection title="Loans Cards Experiments">
+          <p class="section-content">
+            The current loans card on the app home shows only generic
+            information. We explored several iterations to better showcase our
+            loan offerings and boost top-of-funnel engagement.
+          </p>
 
-  <div class="max-w-desktop-content mx-auto my-16">
-    <ContentSection title="Insights and Learnings Beyond Data">
-      <p class="text-lg mt-2">
-        Loans research offered a unique lens into users’ lives and the genuine
-        struggles they face. Unlike most product research, this involved
-        understanding their immediate needs and how they approach finances.
-        <br /><br />
-        Hearing their stories firsthand deepened my sense of responsibility as a
-        designer. Each user’s financial journey is unique and I can make a meaningful
-        impact by designing simple, transparent flows, guiding users to the right
-        solutions, and ensuring a sense of security by avoiding dark patterns.
-      </p>
+          <div
+            class="grid grid-cols-3 pt-12 items-stretch justify-between gap-y-6"
+            style="grid-template-columns: 230px 240px 230px;"
+          >
+            <img
+              src="/loans-research/experiments/mini-loans.png"
+              class="rounded-md shadow-screenshot w-screenshot"
+            />
+            <img
+              src="/loans-research/experiments/home-card.png"
+              class="row-span-2 rounded-md shadow-screenshot w-screenshot"
+            />
+            <img
+              src="/loans-research/experiments/loan-amount-slider.png"
+              class="rounded-md shadow-screenshot w-screenshot"
+            />
+            <img
+              src="/loans-research/experiments/options.png"
+              class="rounded-md shadow-screenshot w-screenshot"
+            />
+            <img
+              src="/loans-research/experiments/recommendations.png"
+              class="rounded-md shadow-screenshot w-screenshot"
+            />
+            <p class="caption">
+              Directly displaying different loan options, giving users clarity
+              about our offerings. Help users choose a loan based on specific
+              use cases
+            </p>
+            <p class="caption">Current loans card on app home</p>
+            <p class="caption">
+              Prompt users to select a loan amount and then recommend loan
+              options for a personalised experience
+            </p>
+          </div>
+        </ContentSection>
+      </div>
+
+      <div class="w-full bg-almondMilk20 px-24 py-14 mt-6">
+        <ContentSection title="Contextual Loan Prompts in User Journeys">
+          <div
+            class="grid grid-cols-3 pt-12 items-stretch justify-between gap-y-6"
+            style="grid-template-columns: 230px 240px 230px;"
+          >
+            <img
+              src="/loans-research/prompts/fd-breaking.png"
+              class="rounded-md shadow-screenshot w-screenshot"
+            />
+            <img
+              src="/loans-research/prompts/rejected-user.png"
+              class="rounded-md shadow-screenshot w-screenshot"
+            />
+            <img
+              src="/loans-research/prompts/web-ob-reject.png"
+              class="rounded-md shadow-screenshot w-screenshot"
+            />
+            <p class="caption">
+              When users choose to break an FD, we suggest taking a loan instead
+              and continue earning interest on their deposit
+            </p>
+            <p class="caption">
+              Users rejected for personal loans might still be eligible for
+              loans against mutual funds. We now show this option to increase
+              awareness on our loan offerings
+            </p>
+            <p class="caption">
+              Similarly, users rejected for a credit card can still check their
+              eligibility for personal loans on Jupiter
+            </p>
+          </div>
+        </ContentSection>
+      </div>
+
+      <div class="w-full bg-almondMilk20 px-24 py-14 mt-6">
+        <ContentSection title="Building Trust">
+          <p class="section-content">
+            Positive experiences with Jupiter in the past, especially with loan
+            repayments and customer support have fostered strong trust. To
+            reinforce this, we decided to add user testimonials and highlight
+            24/7 dedicated customer support availability on the loans tab.
+          </p>
+
+          <div class="flex flex-row justify-between items-center">
+            <img
+              src="/loans-research/building-trust/support.png"
+              class="rounded-md shadow-screenshot w-screenshot"
+            />
+            <img
+              src="/loans-research/building-trust/testimonials.png"
+              class="rounded-md shadow-screenshot w-screenshot"
+            />
+            <img
+              src="/loans-research/building-trust/why-jupiter.png"
+              class="rounded-md shadow-screenshot w-screenshot"
+            />
+          </div>
+        </ContentSection>
+      </div>
+
+      <div class="w-full bg-almondMilk20 px-24 py-14 mt-6">
+        <ContentSection title="Celebrating Achievements">
+          <p class="section-content">
+            The loan journey is simple but lacks memorable, visually engaging
+            moments. We identified opportunities to celebrate user wins and
+            created quick iterations for delightful experiences.
+          </p>
+
+          <div
+            class="grid grid-cols-3 pt-12 items-stretch justify-between gap-y-6"
+            style="grid-template-columns: 230px 240px 230px;"
+          >
+            <img
+              src="/loans-research/celebrations/limit-increase.png"
+              class="rounded-md shadow-screenshot w-screenshot"
+            />
+            <img
+              src="/loans-research/celebrations/disbursement-success.png"
+              class="rounded-md shadow-screenshot w-screenshot"
+            />
+            <img
+              src="/loans-research/celebrations/repayment.png"
+              class="rounded-md shadow-screenshot w-screenshot"
+            />
+            <p class="caption">
+              Currently, users aren’t notified when their loan limit increases.
+              We recommend using a pop-up that appears when users open the app,
+              creating a delightful surprise.
+            </p>
+            <p class="caption">
+              One reason users prefer Jupiter is the quick loan disbursal (in
+              less than 2 mins). We suggest highlighting this on the
+              disbursement success screen, reminding users of the convenience we
+              offer.
+            </p>
+            <p class="caption">
+              Through user conversations, we found that being debt-free is a
+              significant achievement for them. To honour this, we can introduce
+              a celebratory moment when a user makes the final repayment.
+            </p>
+          </div>
+        </ContentSection>
+      </div>
+
+      <div class="max-w-desktop-content-wide mx-auto mt-24">
+        <ContentSection title="Human-Centric Learnings">
+          <p class="section-content">
+            Loans research offered a unique lens into users’ lives and the
+            genuine struggles they face. Unlike most product research, this
+            involved understanding their immediate needs and how they approach
+            finances.
+            <br /><br />
+            Hearing their stories firsthand deepened my sense of responsibility as
+            a designer. Each user’s financial journey is unique and I can make a
+            meaningful impact by designing simple, transparent flows, guiding users
+            to the right solutions, and ensuring a sense of security by avoiding
+            dark patterns.
+          </p>
+        </ContentSection>
+      </div>
+
+      <div class="border-black20 border-t border-b py-8 mt-11 mb-32">
+        <Quotes
+          quotes={[
+            {
+              author: "Somnath Chakraborty",
+              quote:
+                "I took a home renovation loan from my primary bank. The loan was backed by an insurance plan. I lost my Job unexpectedly and the insurance company couldn’t cover remaining EMIs because I didn’t have the required proof of job loss.",
+            },
+            {
+              author: "Vishal Mishra",
+              quote:
+                "I don’t have a credit card. There was a family emergency. I took a Mini Loan on Jupiter to book emergency flight tickets.",
+            },
+          ]}
+        />
+      </div>
     </ContentSection>
-
-    <div
-      class="border-black20 border-t border-b py-8 mt-11 flex justify-between space-x-24"
-    >
-      <Quote
-        body="I took a home renovation loan from my primary bank. The loan was backed by an insurance plan. I lost my Job unexpectedly and the insurance company couldn’t cover remaining EMIs because I didn’t have the required proof of job loss."
-      />
-      <Quote
-        body="I don’t have a credit card. There was a family emergency. I took a Mini Loan on Jupiter to book emergency flight tickets."
-      />
-    </div>
   </div>
 </BaseLayout>
