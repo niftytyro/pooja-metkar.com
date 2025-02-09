@@ -1,5 +1,22 @@
 ---
+interface Props {
+  variant?: "looksRed" | "black";
+  enforceFullWidth?: boolean;
+}
 
+const { variant = "black", enforceFullWidth = false } = Astro.props;
 ---
 
-<div class="w-full h-[0.6px] bg-black20"></div>
+{
+  enforceFullWidth ? (
+    <div class="relative h-[0.6px]"/>
+		
+		<div
+			class={`absolute left-0 w-screen mx-auto h-[0.6px] ${variant === "black" ? "bg-black20" : "bg-looksRed40"}`}
+		/>
+  ) : (
+    <div
+      class={` w-full h-[0.6px] ${variant === "black" ? "bg-black20" : "bg-looksRed40"}`}
+    />
+  )
+}

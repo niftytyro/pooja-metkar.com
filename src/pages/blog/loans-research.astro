@@ -1,15 +1,15 @@
 ---
-import "../global.css";
+import "../../global.css";
 
-import Header from "../components/Header.astro";
-import BaseLayout from "../layouts/BaseLayout.astro";
-import ContentSection from "../components/ContentSection.astro";
-import ListItem from "../components/loans-research/ListItem.astro";
-import PostIt from "../components/loans-research/PostIt.astro";
+import Header from "../../components/Header.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ContentSection from "../../components/ContentSection.astro";
+import ListItem from "../../components/loans-research/ListItem.astro";
+import PostIt from "../../components/loans-research/PostIt.astro";
 
-import MagicArrow from "../icons/magic-arrow.svg";
-import Divider from "../components/Divider.astro";
-import Quotes from "../components/loans-research/Quotes.astro";
+import MagicArrow from "../../icons/magic-arrow.svg";
+import Divider from "../../components/Divider.astro";
+import Quotes from "../../components/loans-research/Quotes.astro";
 
 const keyInsights = [
   "Embedding loans prompts within frequent user journeys can boost awareness. This can help keep loans top of mind as users see them in a relevant context",
@@ -132,7 +132,7 @@ const keyInsights = [
         {
           keyInsights.map((insight, index) => (
             <div class="flex-1">
-              <h4 class="text-looksRed font-medium text-3xl mb-2">
+              <h4 class="text-looksRed20 font-medium text-3xl mb-2">
                 0{index + 1}
               </h4>
               <p class="text-black30 text-base">{insight}</p>

@@ -1,21 +1,37 @@
 ---
 interface Props {
   showDivider?: boolean;
+  currentPage?: "work" | "play" | "about";
 }
 
-const { showDivider = true } = Astro.props;
+const { showDivider = true, currentPage } = Astro.props;
 ---
 
 <header
   class={`flex flex-row justify-between items-center py-8 text-black px-44 ${showDivider ? "border-b-[1px] border-black20" : ""}`}
 >
-  <h1 class="font-bold text-xl leading-7">
+  <h1 class="font-medium text-xl tracking-normal">
     <a href="/">POOJA METKAR</a>
   </h1>
 
-  <nav class="text-lg leading-6 space-x-14">
-    <a href="/work">WORK</a>
-    <a href="/play">PLAY</a>
-    <a href="/about">ABOUT</a>
+  <nav class="text-lg leading-6 tracking-normal space-x-14">
+    <a
+      href="/work"
+      class={`${currentPage === "work" ? "underline underline-offset-4 decoration-1" : ""}`}
+    >
+      WORK
+    </a>
+    <a
+      href="/play"
+      class={`${currentPage === "play" ? "underline underline-offset-4 decoration-1" : ""}`}
+    >
+      PLAY
+    </a>
+    <a
+      href="/about"
+      class={`${currentPage === "about" ? "underline underline-offset-4 decoration-1" : ""}`}
+    >
+      ABOUT
+    </a>
   </nav>
 </header>
