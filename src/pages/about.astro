@@ -1,0 +1,33 @@
+---
+import Divider from "../components/Divider.astro";
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Pooja Metkar | About Me">
+  <Header currentPage="about" />
+  <main class="max-w-desktop-content mx-auto h-full pt-36">
+    <h1 class="font-magic text-6xl leading-snug">Hey there!</h1>
+
+    <p class="cute-heading-title">
+      I’m a Bangalore-based UX Designer with over 9 years of experience in
+      banking, finance, education, and e-commerce. Currently, I lead design for
+      Lending and Investments at Jupiter, focusing on deeply understanding user
+      needs to ensure every detail is carefully crafted.
+      <br /><br />
+      I graduated from the National Institute of Design, Ahmedabad (2014), and since
+      then, I’ve had the opportunity to design a diverse range of physical and digital
+      products. My work revolves around simplicity, understanding emotions, and creating
+      products that truly resonate with people.
+      <br /><br />
+      Beyond work, you’ll often find me creating illustrations with everyday objects
+      in my pursuit of delight. I love being outdoors - playing sports, going on
+      hikes, sometimes high-altitude treks. I also enjoy reading novels, especially
+      fantasy fiction.
+    </p>
+
+    <div class="mt-14 w-[106px]">
+      <Divider />
+    </div>
+  </main>
+</BaseLayout>
