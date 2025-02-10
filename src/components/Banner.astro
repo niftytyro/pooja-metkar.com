@@ -13,8 +13,8 @@ const { body, title } = Astro.props;
   <div class="flex flex-row justify-start items-center space-x-3 mb-2">
     <img src={Star.src} alt="four-pointer-star" />
 
-    <h5 class="text-xl leading-8 font-bold text-black10">{title}</h5>
+    <h5 class="text-xl leading-8 font-semibold text-black10">{title}</h5>
   </div>
 
-  {body ? <p class="ml-9">{body}</p> : <slot />}
+  {body ? <p class="ml-9 font-light">{body}</p> : <slot />}
 </div>

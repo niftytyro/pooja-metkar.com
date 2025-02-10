@@ -10,8 +10,8 @@ const { content, index } = Astro.props;
 <div class="flex flex-row">
   <div class="relative w-6 flex justify-center items-center">
     <div class="border-[0.5px] w-6 h-6 absolute rotate-45"></div>
-    <p class="text-xs">{index}</p>
+    <p class="text-xs mt-[1px]">{index}</p>
   </div>
 
-  <p class="text-base font-light ml-6">{content}</p>
+  <p class="text-base font-light ml-6 flex-1">{content}</p>
 </div>
