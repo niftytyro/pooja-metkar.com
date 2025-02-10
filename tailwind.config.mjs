@@ -20,9 +20,11 @@ export default {
       looksRed: "#C55F1B",
       looksRed20: "#E06513",
       looksRed40: "#F4CCCC",
-      almondMilk: "#F2EDE8",
-      almondMilk20: "#F6F3EC",
-      almondMilk40: "#FBFAF8",
+      almondMilk: "#F1EDE8",
+      almondMilk10: "#F2EDE8",
+      almondMilk20: "#F2F0E8",
+      almondMil40: "#F6F3EC",
+      almondMilk60: "#FBFAF8",
       notPink: "#EFECFD",
       transparent: "#00000000",
     },
@@ -45,6 +47,15 @@ export default {
       },
       boxShadow: {
         screenshot: "0px 5px 14px 0px #0000001F",
+      },
+      animation: {
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
+      },
+      keyframes: {
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
       },
     },
   },

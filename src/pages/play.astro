@@ -1,0 +1,145 @@
+---
+import "../global.css";
+
+import Divider from "../components/Divider.astro";
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const illustrationsWithEverydayObjects = [
+  "/public/play/illustrations-with-everyday-objects/chakri-bike.png",
+  "/public/play/illustrations-with-everyday-objects/the-kitkat-bag.png",
+  "/public/play/illustrations-with-everyday-objects/shroomy-ratatouille.png",
+  "/public/play/illustrations-with-everyday-objects/miss-egguin.png",
+  "/public/play/illustrations-with-everyday-objects/so-green.png",
+  "/public/play/illustrations-with-everyday-objects/mr-figgy.png",
+  "/public/play/illustrations-with-everyday-objects/mac-arons.png",
+  "/public/play/illustrations-with-everyday-objects/orange-skirt-literally.png",
+  "/public/play/illustrations-with-everyday-objects/grapaloons.png",
+  "/public/play/illustrations-with-everyday-objects/kiwi-tabla.png",
+  "/public/play/illustrations-with-everyday-objects/choco-mario.png",
+];
+
+const illustrationSize = 384;
+const illustrationsGap = 24;
+
+const illustrationsWidth =
+  illustrationsWithEverydayObjects.length * illustrationSize +
+  2 * illustrationsGap +
+  (illustrationsWithEverydayObjects.length - 1) * illustrationsGap;
+
+const sketchAndBreakfastSundayPictures = [
+  "/public/play/sketch-and-breakfast-sundays/all-smiles.png",
+  "/public/play/sketch-and-breakfast-sundays/all-stories.png",
+  "/public/play/sketch-and-breakfast-sundays/thats-me.png",
+  "/public/play/sketch-and-breakfast-sundays/thats-my-friends.png",
+  "/public/play/sketch-and-breakfast-sundays/the-table.png",
+  "/public/play/sketch-and-breakfast-sundays/we-love-kids.png",
+];
+---
+
+<BaseLayout title="Pooja Metkar | Play">
+  <Header currentPage="play" />
+  <div class="max-w-desktop-content mx-auto mt-36">
+    <h1 class="font-magic text-6xl leading-snug">Creative Pursuits</h1>
+
+    <div class="mt-10 mb-20 w-[76px]">
+      <Divider />
+    </div>
+  </div>
+
+  <main class="space-y-36 pb-60">
+    <section>
+      <div class="max-w-desktop-content mx-auto">
+        <p class="text-lg text-black30">
+          <span class="text-black font-semibold">
+            Illustrations with everyday objects</span
+          > - Art is a playful escape that keeps me curious and inspired. In my free
+          time, I create these illustrations that have taken me on unexpected adventures.
+          A small selection from the illustrations series:
+        </p>
+      </div>
+
+      <div class="mt-8 bg-almondMilk20 w-full overflow-hidden">
+        <div class="inline-flex animate-[infinite-scroll_20s_linear_infinite]">
+          <div
+            class="inline-flex space-x-6 py-6 pl-6"
+            style={`width: ${illustrationsWidth}px`}
+          >
+            {
+              illustrationsWithEverydayObjects.map((illustration) => (
+                <img src={illustration} class="size-96" />
+              ))
+            }
+          </div>
+          <div
+            class="inline-flex space-x-6 py-6"
+            style={`width: ${illustrationsWidth}px`}
+          >
+            {
+              illustrationsWithEverydayObjects.map((illustration) => (
+                <img src={illustration} class="size-96" />
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="max-w-desktop-content mx-auto">
+        <p class="text-lg text-black30">
+          <span class="text-black font-semibold">Art Exhibit</span> - In September
+          2024, I had the opportunity to showcase my illustrations at DYU Art Gallery
+          in Bangalore.
+        </p>
+      </div>
+
+      <div class="mt-8 bg-almondMilk10 flex flex-row space-x-6 p-6 w-full">
+        <img
+          src="/play/art-exhibition/the-doggo-loved-it.png"
+          class="h-[392px] flex-[4]"
+        />
+        <img
+          src="/play/art-exhibition/friends-loved-it-too.png"
+          class="h-[392px] flex-[2]"
+        />
+        <img
+          src="/play/art-exhibition/the-exhibit.png"
+          class="h-[392px] flex-[4]"
+        />
+      </div>
+    </section>
+
+    <section>
+      <div class="max-w-desktop-content mx-auto">
+        <p class="text-lg text-black30">
+          <span class="text-black font-semibold"
+            >Sketch and Breakfast Sundays</span
+          > - These Sundays are when a group of people come together, put away their
+          phones and dive into the simple joys of sketching, coffee and fun conversations.
+          When I’m sketching, I feel time slows down and life feels a little lighter.
+          That’s why I started this - in pursuit of the simple joys.
+        </p>
+      </div>
+
+      <div class="mt-8 bg-almondMilk w-full overflow-hidden">
+        <div class="inline-flex animate-[infinite-scroll_15s_linear_infinite]">
+          <div class="inline-flex space-x-6 py-6 pl-6" style={`width: 2250px`}>
+            {
+              sketchAndBreakfastSundayPictures.map((illustration) => (
+                <img src={illustration} class="h-[420px]" />
+              ))
+            }
+          </div>
+          <div class="inline-flex space-x-6 py-6 pl-6" style={`width: 2250px`}>
+            {
+              sketchAndBreakfastSundayPictures.map((illustration) => (
+                <img src={illustration} class="h-[420px]" />
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
