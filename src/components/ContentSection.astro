@@ -1,13 +1,16 @@
 ---
 interface Props {
   title: string;
+  addPaddingRight?: boolean;
 }
 
-const { title } = Astro.props;
+const { title, addPaddingRight = true } = Astro.props;
 ---
 
 <section>
   <h3 class="section-title mb-3">{title}</h3>
 
-  <slot />
+  <div class={addPaddingRight ? "pr-48" : ""}>
+    <slot />
+  </div>
 </section>

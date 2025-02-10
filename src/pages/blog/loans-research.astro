@@ -26,7 +26,7 @@ const keyInsights = [
     <h2 class="blog-title mb-4 mt-20">Loans Research</h2>
 
     <ContentSection title="Background & Objective">
-      <p class="text-lg">
+      <p class="section-content">
         Since loans is an intent-based product , any funnel improvements often
         result in only incremental changes. We aimed to understand what
         influences our users’ decisions when considering loan options, assess
@@ -36,7 +36,7 @@ const keyInsights = [
     </ContentSection>
 
     <ContentSection title="Methodology">
-      <p class="text-lg">
+      <p class="section-content">
         We conducted 30-minute in-depth interviews with 19 users across 4
         selected groups, focusing on their experience with loan products.
       </p>
@@ -135,7 +135,7 @@ const keyInsights = [
               <h4 class="text-looksRed20 font-medium text-3xl mb-2">
                 0{index + 1}
               </h4>
-              <p class="text-black30 text-base">{insight}</p>
+              <p class="text-black30 text-base font-light">{insight}</p>
             </div>
           ))
         }
@@ -157,7 +157,7 @@ const keyInsights = [
   </div>
 
   <div class="max-w-desktop-content-wide mx-auto my-16">
-    <ContentSection title="Recommendations">
+    <ContentSection title="Recommendations" addPaddingRight={false}>
       <div class="w-full bg-almondMil40 px-24 py-14 mt-10">
         <ContentSection title="Loans Cards Experiments">
           <p class="section-content">
@@ -266,7 +266,10 @@ const keyInsights = [
       </div>
 
       <div class="w-full bg-almondMil40 px-24 py-14 mt-6">
-        <ContentSection title="Celebrating Achievements">
+        <ContentSection
+          title="Celebrating Achievements"
+          addPaddingRight={false}
+        >
           <p class="section-content">
             The loan journey is simple but lacks memorable, visually engaging
             moments. We identified opportunities to celebrate user wins and

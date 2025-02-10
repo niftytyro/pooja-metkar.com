@@ -41,7 +41,7 @@ const disbursalJourneyScreenshots = 18;
     <h2 class="blog-title mb-4 mt-20">Crafting Financial Journeys</h2>
 
     <ContentSection title="Background">
-      <p class="text-lg">
+      <p class="section-content">
         Jupiter is a digital banking app that helps users manage their finances,
         offering services like savings accounts, UPI payments, loans, credit
         cards, spends tracker, and various investment products. As we introduced
@@ -55,7 +55,7 @@ const disbursalJourneyScreenshots = 18;
     </ContentSection>
 
     <ContentSection title="My Role">
-      <p class="text-lg">
+      <p class="section-content">
         I led the complete redesign of loans experience, covering both pre &
         post-disbursement journeys. I worked with product leadership to shape
         journeys focused on clarity, transparency, and building trust.
@@ -71,7 +71,7 @@ const disbursalJourneyScreenshots = 18;
   <div class="mt-16 py-16 bg-almondMilk60">
     <div class="max-w-desktop-content mx-auto space-y-16">
       <ContentSection title="Simplifying loan selection">
-        <p class="text-lg">
+        <p class="section-content">
           The previous loans tab was cluttered with too many actions, leaving
           users confused. We asked ourselves, 'What’s the key task we want users
           to accomplish?'— selecting the right loan option.
@@ -83,13 +83,13 @@ const disbursalJourneyScreenshots = 18;
 
         <video
           src="/videos/simplifying-loan-selection.mp4"
-          class="h-screenshot-md mx-auto mt-16 mb-6 rounded-2xl"
+          class="h-screenshot-md mx-auto mt-16 mb-6 rounded-2xl shadow-screenshot"
           autoplay
           loop></video>
       </ContentSection>
 
       <ContentSection title="Using animations for clarity">
-        <p class="text-lg">
+        <p class="section-content">
           In the previous design, the amount selection screen was static, with
           the slider set to the maximum by default. This confused some users who
           didn’t realise it was interactive.
@@ -101,7 +101,7 @@ const disbursalJourneyScreenshots = 18;
 
         <video
           src="/videos/using-animations-for-clarity.mov"
-          class="h-screenshot-md mx-auto mt-16 mb-6 rounded-2xl"
+          class="h-screenshot-md mx-auto mt-16 mb-6 rounded-2xl shadow-screenshot"
           autoplay
           loop></video>
       </ContentSection>
@@ -109,9 +109,9 @@ const disbursalJourneyScreenshots = 18;
   </div>
 
   <div class="bg-almondMil40">
-    <div class="py-16 max-w-desktop-content mx-auto space-y-16">
+    <div class="pt-16 max-w-desktop-content mx-auto space-y-16">
       <ContentSection title="Setting up auto-pay">
-        <p class="text-lg">
+        <p class="section-content">
           Users need to add a bank account and set up auto-pay before receiving
           their loan amount. This can cause anxiety if accurate information
           isn’t provided. We addressed this by making key copy changes and
@@ -125,7 +125,7 @@ const disbursalJourneyScreenshots = 18;
       class="mx-auto h-[586px] aspect-[1.7]"
     />
 
-    <div class="py-16 max-w-desktop-content mx-auto space-y-8">
+    <div class="pb-16 pt-8 max-w-desktop-content mx-auto space-y-8">
       {
         autoPayScreenshotAnnotationss.map((content, index) => (
           <Annotation index={index + 1} content={content} />
@@ -135,9 +135,9 @@ const disbursalJourneyScreenshots = 18;
   </div>
 
   <div class="bg-almondMilk60">
-    <div class="py-16 max-w-desktop-content mx-auto space-y-16">
+    <div class="pt-16 max-w-desktop-content mx-auto space-y-16">
       <ContentSection title="Checkout">
-        <p class="text-lg">
+        <p class="section-content">
           After setting up auto-pay, the loan amount was instantly credited to
           users' accounts, often without them realising it. Users didn’t have a
           chance to review the details before disbursement. This led to 30%
@@ -151,10 +151,10 @@ const disbursalJourneyScreenshots = 18;
 
     <img
       src="/crafting-financial-journeys/checkout.png"
-      class="mx-auto h-[586px] aspect-[0.75]"
+      class="mx-auto h-[586px] aspect-[0.75] pt-8"
     />
 
-    <div class="py-16 max-w-desktop-content mx-auto space-y-8">
+    <div class="pt-8 pb-16 max-w-desktop-content mx-auto space-y-8">
       {
         checkoutScreenshotAnnotationss.map((content, index) => (
           <Annotation index={index + 1} content={content} />
@@ -185,7 +185,7 @@ const disbursalJourneyScreenshots = 18;
 
     <div class="py-16 max-w-desktop-content mx-auto space-y-16">
       <ContentSection title="Simplifying Repayments">
-        <p class="text-lg">
+        <p class="section-content">
           Our earlier repayment flows had confusing information, leading to the
           highest number of CS tickets. Users felt anxious about their EMI
           payments because they couldn’t clearly understand the exact amount
@@ -213,11 +213,11 @@ const disbursalJourneyScreenshots = 18;
       }
     </div>
 
-    <div class="max-w-desktop-content-wide mx-auto space-y-6 pt-16 pb-40">
+    <div class="max-w-desktop-content mx-auto space-y-6 pt-16 pb-40">
       <Divider />
 
       <button class="mx-auto flex space-x-5">
-        <p>Detailed Insights and Documentation</p>
+        <p>Know more about designing for lending</p>
         <img src={MagicArrow.src} />
       </button>
 

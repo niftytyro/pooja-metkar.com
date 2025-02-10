@@ -8,7 +8,7 @@ export default {
       black10: "#001820",
       black20: "#232323",
       black30: "#393939",
-      black60: "#525252",
+      black60: "#595959",
       black80: "#767676",
       black120: "#CFD6DF",
       yellow40: "#ECB81C",

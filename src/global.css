@@ -83,7 +83,7 @@ h5 {
 
 .section-title {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 36px;
   letter-spacing: -0.01em;
   text-align: left;
@@ -104,7 +104,7 @@ h5 {
 
 .section-content {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 26px;
   letter-spacing: -0.01em;
   text-align: left;
@@ -141,7 +141,7 @@ h5 {
 }
 
 .caption2 {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.6px;

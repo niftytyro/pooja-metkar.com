@@ -9,12 +9,12 @@ interface Props {
 const { title, trailingText } = Astro.props;
 ---
 
-<div class="flex flow-row justify-start items-center">
+<div class="flex flow-row justify-start items-baseline">
   <img src={RedStar.src} />
-  <h3 class="ml-4 font-medium text-3xl text-black10">
+  <h3 class="ml-4 font-medium text-2xl text-black10">
     {title}
   </h3>
-  <p class="ml-2 text-lg text-black30">
+  <p class="ml-2 text-base font-light text-black30">
     {trailingText}
   </p>
 </div>
