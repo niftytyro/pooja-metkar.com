@@ -86,25 +86,27 @@ const disbursalJourneyScreenshots = 18;
         journeys focused on clarity, transparency, and building trust.
       </p>
 
-      <p class="mb-3 font-semibold text-lg leading-8 mt-5">
+      <p class="mb-3 font-semibold text-lg leading-8 mt-5 text-black10">
         The redesign covered:
       </p>
 
       <ul class="list-disc list-inside section-content space-y-2">
-        <li>
+        <li class="section-content">
           Onboarding & Discovery - Discovery on app home, loans tab redesign,
           loans identities
         </li>
-        <li>
+        <li class="section-content">
           Loan application - Eligibility check, amount and tenure selection,
           video-KYC verification, bank account and auto-pay setup, journeys for
           dropped-off & repeat users
         </li>
-        <li>Checkout - Final review and disbursement</li>
+        <li class="section-content">
+          Checkout - Final review and disbursement
+        </li>
         <li>
           Post-disbursal Experience - Active loan management, repayment flows
         </li>
-        <li>
+        <li class="section-content">
           Enhancements & features - Account aggregation, loan limit upgrades,
           offers on interest rates and processing fees, EMI insurance
         </li>
@@ -230,7 +232,7 @@ const disbursalJourneyScreenshots = 18;
             .map((_, index) => (
               <img
                 src={`/crafting-financial-journeys/disbursal-journey/${index + 1}.png`}
-                class={`h-[456px] aspect-[0.46] flex-shrink-0`}
+                class={`h-[456px] flex-shrink-0`}
               />
             ))
         }
