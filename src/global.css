@@ -13,18 +13,12 @@
   overflow: -moz-scrollbars-none;
 }
 
-.black-and-white-picture {
-  font-family: "Are You Serious", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
 @font-face {
-  font-family: "SVN Radiant Slender";
+  font-family: "SVN-Radiant Slender";
   font-style: normal;
   font-weight: 200 700;
   font-display: swap;
-  src: url("/fonts/SVN-Radiant Slender.ttf") format("ttf");
+  src: url("/fonts/SVN-Radiant Slender.ttf") format("truetype");
 }
 
 .manrope {
