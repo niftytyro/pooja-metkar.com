@@ -10,6 +10,7 @@ export default {
       black30: "#393939",
       black60: "#595959",
       black80: "#767676",
+      black100: "#606060",
       black120: "#CFD6DF",
       yellow40: "#ECB81C",
       yellow60: "#FCECDC",

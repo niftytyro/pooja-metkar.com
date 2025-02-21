@@ -31,6 +31,13 @@ const simplifyingRepaymentAnnotations = [
   "Showing only essential details like payable amount",
 ];
 
+const simplifyingLoanSelectionAnnotations = [
+  "The previous design had too many variations in font sizes and weights, making it visually cluttered.  In the new design, we used with clear size differences to make it easier to scan",
+  "We made the loan limit bold and prominent to draw users’ attention to the most relevant information. Other details are grouped in a clean, organised manner to help users quickly compare options",
+  "To guide users clearly to the next step, we changed the main heading to ‘Select the loan you want’",
+  "We moved to a muted, cohesive colour palette to make our app feel more professional and trustworthy",
+];
+
 const disbursalJourneyScreenshots = 18;
 ---
 
@@ -38,19 +45,37 @@ const disbursalJourneyScreenshots = 18;
   <Header />
 
   <main class="max-w-desktop-content mx-auto space-y-16">
-    <h2 class="blog-title mb-4 mt-20">Crafting Financial Journeys</h2>
+    <div class="mb-4">
+      <h2 class="blog-title mb-2 mt-20">Crafting Financial Journeys</h2>
+      <div class="flex flex-row">
+        <p class="text-base leading-7 text-black100 font-light">
+          Jupiter • 2023-24 • App Redesign
+        </p>
+      </div>
+    </div>
 
     <ContentSection title="Background">
       <p class="section-content">
-        Jupiter is a digital banking app that helps users manage their finances,
-        offering services like savings accounts, UPI payments, loans, credit
-        cards, spends tracker, and various investment products. As we introduced
-        more features, our UI became cluttered, leading to many inconsistencies
-        that made the app feel less confident.
+        Jupiter is a digital banking app that helps users manage their finances.
+        It offers savings accounts, UPI payments, loans, credit cards, a spends
+        tracker, and various investment products - all in one place.
         <br /><br />
-        We decided to redesign the app and created new design principles to craft
-        every screen, number, and interaction in a way that a user always feels confident
-        about the decisions they make.
+        As we introduced more products and features, the UI started to feel cluttered,
+        leading to inconsistencies across the app. The experience became confusing,
+        information wasn’t structured clearly, and we struggled to build the trust
+        we wanted with our users. It became evident that a redesign was necessary.
+        <br /><br />
+        For users to trust us with their money, every screen had to feel personal
+        and intuitive. We needed to remove the anxiety and fear that came with taking
+        the next step, especially in journeys like taking a loan. We created new
+        design principles to craft screens, numbers, and interactions in a way that
+        will make users feel confident in their decisions.
+        <br /><br />
+        I worked with product, business, data and risk teams to truly understand
+        loans users - their age, income groups, credit profiles, loan purposes, when
+        they typically used the app, and their aspirations as well as discomforts.
+        These insights into users' minds helped me design journeys that genuinely
+        supported them at every step of taking a loan.
       </p>
     </ContentSection>
 
@@ -60,9 +85,33 @@ const disbursalJourneyScreenshots = 18;
         post-disbursement journeys. I worked with product leadership to shape
         journeys focused on clarity, transparency, and building trust.
       </p>
+
+      <p class="mb-3 font-semibold text-lg leading-8 mt-5">
+        The redesign covered:
+      </p>
+
+      <ul class="list-disc list-inside section-content space-y-2">
+        <li>
+          Onboarding & Discovery - Discovery on app home, loans tab redesign,
+          loans identities
+        </li>
+        <li>
+          Loan application - Eligibility check, amount and tenure selection,
+          video-KYC verification, bank account and auto-pay setup, journeys for
+          dropped-off & repeat users
+        </li>
+        <li>Checkout - Final review and disbursement</li>
+        <li>
+          Post-disbursal Experience - Active loan management, repayment flows
+        </li>
+        <li>
+          Enhancements & features - Account aggregation, loan limit upgrades,
+          offers on interest rates and processing fees, EMI insurance
+        </li>
+      </ul>
     </ContentSection>
 
-    <div class="pr-28">
+    <div class="pr-28 mt-4">
       <Banner
         title="Impact"
         body="We achieved a 24.8% increase in conversions for new users and a 27% boost for repeat users"
@@ -70,24 +119,27 @@ const disbursalJourneyScreenshots = 18;
     </div>
   </main>
 
-  <div class="mt-16 py-16 bg-almondMilk60">
+  <div class="mt-20 py-16 bg-almondMilk60">
     <div class="max-w-desktop-content mx-auto space-y-16">
       <ContentSection title="Simplifying loan selection">
         <p class="section-content">
           The previous loans tab was cluttered with too many actions, leaving
           users confused. We asked ourselves, 'What’s the key task we want users
           to accomplish?'— selecting the right loan option.
-          <br /><br />
-          We removed unnecessary elements to help users choose easily. The most critical
-          factor in loan selection is the amount offered, so we redesigned the loan
-          cards to be minimalistic and easy to compare, with focus on loan limit
         </p>
 
-        <video
-          src="/videos/simplifying-loan-selection.mp4"
-          class="h-screenshot-md mx-auto mt-16 mb-6 rounded-2xl shadow-screenshot"
-          autoplay
-          loop></video>
+        <img
+          src="/public/crafting-financial-journeys/simplifying-loan-selection.png"
+          class="h-screenshot mx-auto mt-16"
+        />
+
+        <div class="pt-16 pb-16 mx-auto space-y-8">
+          {
+            simplifyingLoanSelectionAnnotations.map((note, index) => (
+              <Annotation index={index + 1} content={note} />
+            ))
+          }
+        </div>
       </ContentSection>
 
       <ContentSection title="Using animations for clarity">
